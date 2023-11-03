@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#343434"
-    tools:context=".UserLogin">
+    tools:context=".Scanner">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="547dp"
-        android:layout_height="220dp"
+        android:id="@+id/scanimageView"
+        android:layout_width="574dp"
+        android:layout_height="238dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/top_background" />
 
-
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/scantextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="130dp"
+        android:clickable="false"
+        android:fontFamily="@font/adamina"
         android:text="Scan Here"
         android:textColor="#ffffff"
         android:textSize="40dp"
@@ -35,7 +36,7 @@
         app:layout_constraintVertical_bias="0.375" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/scanimageView5"
         android:layout_width="287dp"
         android:layout_height="324dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -46,16 +47,15 @@
         app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/scanimageView6"
         android:layout_width="170dp"
         android:layout_height="159dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/scanimageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/scanimageView5"
         app:layout_constraintVertical_bias="0.434"
         app:srcCompat="@drawable/scanner" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

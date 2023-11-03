@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#343434"
-    tools:context=".UserLogin">
+    tools:context=".AdminLogin">
 
     <ImageView
         android:id="@+id/adminimageView"
@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="130dp"
+        android:fontFamily="@font/adamina"
         android:text="Admin Login"
         android:textColor="#ffffff"
         android:textSize="40dp"
@@ -56,7 +57,7 @@
 
     <EditText
         android:id="@+id/admineditTextPassword1"
-        android:layout_width="365dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="36dp"
         android:layout_weight="1"
