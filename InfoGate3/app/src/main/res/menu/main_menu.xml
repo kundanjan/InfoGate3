@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_adminLogin"
+            android:title="Admin Login"
+            android:icon="@drawable/adminlogin"/>
+        <item
+            android:id="@+id/nav_aboutus"
+            android:title="About Us"
+            android:icon="@drawable/about_us"/>
+        <item
+            android:id="@+id/nav_aboutApp"
+            android:title="About App"
+            android:icon="@drawable/about_app"/>
+
+    </group>
+</menu>
