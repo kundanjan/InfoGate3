@@ -21,6 +21,15 @@
         <activity
             android:name=".SignUp"
             android:exported="false" />
+        <activity
+            android:name=".Scanner"
+            android:exported="false" />
+        <activity
+            android:name=".GetInfo"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
 
         <activity
             android:name=".MainActivity"

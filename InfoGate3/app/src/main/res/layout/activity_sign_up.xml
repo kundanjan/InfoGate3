@@ -43,6 +43,7 @@
         android:drawableStart="@drawable/name"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:fontFamily="@font/open_sans"
         android:hint="Full Name"
         android:inputType="text"
         android:padding="8dp"
@@ -64,6 +65,7 @@
         android:drawableStart="@drawable/email"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:fontFamily="@font/open_sans"
         android:hint="Email"
         android:inputType="text"
         android:padding="8dp"
@@ -85,6 +87,7 @@
         android:drawableStart="@drawable/password"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:fontFamily="@font/open_sans"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="8dp"
@@ -105,6 +108,7 @@
         android:drawableStart="@drawable/password"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:fontFamily="@font/open_sans"
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:padding="8dp"
@@ -122,16 +126,16 @@
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.996"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.821"
+        app:layout_constraintVertical_bias="0.81"
         app:srcCompat="@drawable/btn_login" />
 
     <Button
         android:id="@+id/signbutton8"
-        android:layout_width="155dp"
-        android:layout_height="70dp"
+        android:layout_width="209dp"
+        android:layout_height="68dp"
         android:text="REGISTER"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -139,12 +143,14 @@
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signeditTextPassword1"
-        app:layout_constraintVertical_bias="0.712" />
+        app:layout_constraintVertical_bias="0.712"
+        app:rippleColor="#FFEB3B" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/adamina"
         android:text="Already have an Account? Login"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -40,6 +40,14 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
         signbtn = findViewById(R.id.usertextView3);
         loginbtn = findViewById(R.id.button8);
 
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserLogin.this,Scanner.class);
+                startActivity(intent);
+            }
+        });
+
         signbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,6 +101,9 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
             startActivity(intent);
         }
         else if(id == R.id.nav_aboutus) {
+            Intent intent = new Intent(UserLogin.this,AboutUs.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
 
         }
         return true;

@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.275" />
 
     <EditText
-        android:id="@+id/admineditTextText1"
+        android:id="@+id/adminUsername"
         android:layout_width="356dp"
         android:layout_height="50dp"
         android:layout_marginTop="356dp"
@@ -44,10 +44,10 @@
         android:drawableStart="@drawable/name"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:fontFamily="@font/open_sans"
         android:hint="UserName"
         android:inputType="text"
         android:padding="8dp"
-        android:text="UserName"
         android:textColor="#E1A500"
         android:textColorHint="#E1A500"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/admineditTextPassword1"
+        android:id="@+id/adminPassword"
         android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginTop="36dp"
@@ -65,16 +65,16 @@
         android:drawableStart="@drawable/password"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:fontFamily="@font/open_sans"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="8dp"
-        android:text="Password"
         android:textColor="#E1A500"
         android:textColorHint="#E1A500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admineditTextText1" />
+        app:layout_constraintTop_toBottomOf="@+id/adminUsername" />
 
     <ImageView
         android:id="@+id/adminimageView7"
@@ -90,17 +90,19 @@
         app:srcCompat="@drawable/btn_login" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/adminBtn"
         android:layout_width="155dp"
         android:layout_height="70dp"
+        android:fontFamily="@font/open_sans"
         android:text="LOGIN"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/admineditTextPassword1"
-        app:layout_constraintVertical_bias="0.712" />
+        app:layout_constraintTop_toBottomOf="@+id/adminPassword"
+        app:layout_constraintVertical_bias="0.712"
+        app:rippleColor="#FFEB3B" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
