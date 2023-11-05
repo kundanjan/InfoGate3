@@ -7,12 +7,13 @@
     android:background="#343434"
     tools:context=".Scanner">
 
+
     <ImageView
         android:id="@+id/scanimageView"
         android:layout_width="574dp"
         android:layout_height="238dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintHorizontal_bias="0.723"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/top_background" />
@@ -35,27 +36,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.375" />
 
-    <ImageView
-        android:id="@+id/scanimageView5"
-        android:layout_width="287dp"
-        android:layout_height="324dp"
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="181dp"
+        android:layout_height="187dp"
+        android:shadowColor="#356385"
+        android:text="Scan"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621"
-        app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+        app:layout_constraintStart_toTopOf="parent"
 
-    <ImageView
-        android:id="@+id/scanimageView6"
-        android:layout_width="170dp"
-        android:layout_height="159dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scanimageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scanimageView5"
-        app:layout_constraintVertical_bias="0.434"
-        app:srcCompat="@drawable/scanner" />
+        app:layout_constraintTop_toBottomOf="@+id/scantextView4" />
+
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/scanimageView5"-->
+<!--        android:layout_width="312dp"-->
+<!--        android:layout_height="347dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.621"-->
+<!--        app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/scanimageView6"-->
+<!--        android:layout_width="170dp"-->
+<!--        android:layout_height="159dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/scanimageView5"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.502"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/scanimageView5"-->
+<!--        app:layout_constraintVertical_bias="0.434"-->
+<!--        app:srcCompat="@drawable/scanner" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
