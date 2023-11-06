@@ -148,7 +148,7 @@
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.332" />
 
     <ImageView
         android:id="@+id/vina"
@@ -228,7 +228,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:text="Our Vision:"
-        android:textAlignment="center"
         android:textColor="#8C843E"
         android:textSize="@dimen/_9ssp"
         android:textStyle="bold"
@@ -237,6 +236,6 @@
         app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.818" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

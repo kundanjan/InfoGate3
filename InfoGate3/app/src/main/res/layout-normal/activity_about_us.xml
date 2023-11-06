@@ -103,8 +103,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="373dp"
-        android:layout_height="22dp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_22ssp"
         android:fontFamily="@font/open_sans"
         android:text="Welcome to our Student Community!"
         android:textColor="#8C843E"
@@ -125,6 +125,7 @@
         android:fontFamily="@font/open_sans"
         android:text="We are a group of three enthusiastic students dedicated to providing comprehensive information about the various computers from labs in our college campus."
         android:textColor="#FFFFFF"
+        android:textAlignment="center"
         android:textSize="@dimen/_9ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,7 +140,6 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:text="Meet Our Team:"
-        android:textAlignment="center"
         android:textColor="#8C843E"
         android:textSize="@dimen/_9ssp"
         android:textStyle="bold"
@@ -148,7 +148,7 @@
         app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.326" />
 
     <ImageView
         android:id="@+id/vina"
@@ -210,17 +210,18 @@
     <TextView
         android:id="@+id/textView11"
         android:layout_width="@dimen/_310sdp"
-        android:layout_height="@dimen/_61ssp"
+        android:layout_height="@dimen/_64ssp"
         android:fontFamily="@font/open_sans"
         android:text="Our team is passionate about leveraging blockchain technology to create secure and transparent solutions for the future.Together, we shared commitment to excellence and a passion for delivering good-quality results."
         android:textColor="#FFFFFF"
+        android:textAlignment="center"
         android:textSize="@dimen/_9ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.95" />
 
     <TextView
         android:id="@+id/textView12"
@@ -228,15 +229,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:text="Our Vision:"
-        android:textAlignment="center"
         android:textColor="#8C843E"
         android:textSize="@dimen/_9ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.818" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

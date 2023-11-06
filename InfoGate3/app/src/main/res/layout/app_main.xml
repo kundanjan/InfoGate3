@@ -15,7 +15,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="INFOGATE" />
+            app:title="INFOGATE"
+            app:titleTextColor="#E8C973"/>
 
     </com.google.android.material.appbar.AppBarLayout>
     <include layout="@layout/content_main"/>

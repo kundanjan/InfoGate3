@@ -1,5 +1,6 @@
 package com.example.infogate3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,9 @@ public class AdminLogin extends AppCompatActivity {
             public void onClick(View view) {
                 if (Ausername.getText().toString().equals("user") && Apwd.getText().toString().equals("1234")) {
                     Toast.makeText(AdminLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(AdminLogin.this,AfterAdminLogin.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(AdminLogin.this, "Login Failed!", Toast.LENGTH_SHORT).show();
                 }

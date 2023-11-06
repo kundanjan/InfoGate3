@@ -104,7 +104,12 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
             Intent intent = new Intent(UserLogin.this,AboutUs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
-
+        }
+        else
+        {
+            Intent intent = new Intent(UserLogin.this,AboutApp.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
         return true;
     }

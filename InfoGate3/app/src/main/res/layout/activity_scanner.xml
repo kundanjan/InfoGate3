@@ -1,61 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#343434"
-    tools:context=".Scanner">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/scanimageView"
-        android:layout_width="574dp"
-        android:layout_height="238dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/top_background" />
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/scantextView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
-        android:clickable="false"
-        android:fontFamily="@font/adamina"
-        android:text="Scan Here"
-        android:textColor="#ffffff"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
-
-    <ImageView
-        android:id="@+id/scanimageView5"
-        android:layout_width="287dp"
-        android:layout_height="324dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621"
-        app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
-
-    <ImageView
-        android:id="@+id/scanimageView6"
-        android:layout_width="170dp"
-        android:layout_height="159dp"
-        app:layout_constraintBottom_toBottomOf="@+id/scanimageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scanimageView5"
-        app:layout_constraintVertical_bias="0.434"
-        app:srcCompat="@drawable/scanner" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
