@@ -22,6 +22,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Scanner.class));
                 finish();
             }
-        },5000);
+        },4000);
     }
 }

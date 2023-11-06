@@ -11,23 +11,51 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class UserLogin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    EditText username,pwd;
+    TextView signbtn;
+    Button loginbtn;
+
+
 //    variables
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
 
+        username = findViewById(R.id.editTextText);
+        pwd = findViewById(R.id.editTextPassword);
+        signbtn = findViewById(R.id.usertextView3);
+        loginbtn = findViewById(R.id.button8);
 
+        loginbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserLogin.this,Scanner.class);
+                startActivity(intent);
+            }
+        });
+
+        signbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                startActivity(new Intent(getApplicationContext(),SignUp.class));
+                Intent intent = new Intent(UserLogin.this,SignUp.class);
+                startActivity(intent);
+            }
+        });
 
 //        Hooks
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -73,7 +101,15 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
             startActivity(intent);
         }
         else if(id == R.id.nav_aboutus) {
-
+            Intent intent = new Intent(UserLogin.this,AboutUs.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+        else
+        {
+            Intent intent = new Intent(UserLogin.this,AboutApp.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
         return true;
     }
