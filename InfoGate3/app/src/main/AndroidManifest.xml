@@ -42,6 +42,9 @@
         <activity
             android:name=".AfterAdminLogin"
             android:exported="false" />
+        <activity
+            android:name=".Scan"
+            android:exported="false" />
 
         <activity
             android:name=".MainActivity"

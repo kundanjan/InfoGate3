@@ -8,14 +8,13 @@ import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
-
 import androidx.core.app.ActivityCompat;
-
+import android.Manifest;
+import androidx.annotation.NonNull;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
-
 import java.io.IOException;
 
 //public class Scanner extends AppCompatActivity {
@@ -89,24 +88,6 @@ import java.io.IOException;
 //        });
 //    }
 //}
-
-
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
-import androidx.annotation.NonNull;
-import android.util.SparseArray;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.widget.Toast;
-
-import com.google.android.gms.vision.CameraSource;
-import com.google.android.gms.vision.Detector;
-import com.google.android.gms.vision.barcode.Barcode;
-import com.google.android.gms.vision.barcode.BarcodeDetector;
-
-import java.io.IOException;
 
 public class Scanner extends AppCompatActivity {
 
