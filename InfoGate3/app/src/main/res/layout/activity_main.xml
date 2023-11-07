@@ -9,6 +9,7 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/backgroundLayout"
         android:layout_width="150dp"
