@@ -1,242 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#343434"
-    android:fadeScrollbars="false"
-    tools:context=".AboutUs">
+android:layout_height="match_parent"
+android:background="#343434">
+
+<!-- Top Background Image -->
+<ImageView
+    android:id="@+id/topBackgroundImage"
+    android:contentDescription="@string/content4"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_120sdp"
+    android:src="@drawable/top_background"
+    android:scaleType="centerCrop"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/kundanname"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_60ssp"
-        android:background="@drawable/rounded_edittext"
-        android:fontFamily="@font/adamina"
-        android:text=" Kundan Jangale"
-        android:textAlignment="center"
-        android:textSize="@dimen/_9ssp"
-        android:textColor="#8C843E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.569" />
-
-    <TextView
-        android:id="@+id/kundanrole"
-        android:layout_width="@dimen/_170sdp"
-        android:layout_height="@dimen/_30ssp"
-        android:fontFamily="@font/open_sans"
-        android:text="Role: Blockchain Developer"
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/_9ssp"
-        app:layout_constraintBottom_toBottomOf="@+id/kundanname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
-        app:layout_constraintStart_toStartOf="@+id/kundanname"
-        app:layout_constraintTop_toTopOf="@+id/kundanname"
-        app:layout_constraintVertical_bias="0.641" />
-
-    <TextView
-        android:id="@+id/prerananame"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_60ssp"
-        android:background="@drawable/rounded_edittext"
-        android:fontFamily="@font/adamina"
-        android:text=" Prerana Pawar"
-        android:textAlignment="center"
-        android:textSize="@dimen/_9ssp"
-        android:textColor="#8C843E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.738" />
-
-    <TextView
-        android:id="@+id/preranarole"
-        android:layout_width="@dimen/_170sdp"
-        android:layout_height="@dimen/_30ssp"
-        android:fontFamily="@font/open_sans"
-        android:text="Role: Backend Developer"
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/_9ssp"
-        app:layout_constraintBottom_toBottomOf="@+id/prerananame"
-        app:layout_constraintEnd_toEndOf="@+id/prerananame"
-        app:layout_constraintHorizontal_bias="0.692"
-        app:layout_constraintStart_toStartOf="@+id/prerananame"
-        app:layout_constraintTop_toTopOf="@+id/prerananame"
-        app:layout_constraintVertical_bias="0.743" />
-
-    <ImageView
-        android:id="@+id/aboutUsimg"
-        android:layout_width="@dimen/_330sdp"
-        android:layout_height="@dimen/_100ssp"
-        android:background="#271D1D"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.805"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/top_background" />
-
-    <TextView
-        android:id="@+id/aboutUstextView"
-        android:layout_width="wrap_content"
+        android:id="@+id/aboutUsTitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
-        android:fontFamily="@font/adamina"
-        android:text="ABOUT US"
-        android:textColor="#ffffff"
-        android:textSize="30dp"
+        android:text="@string/aboutUsHeading"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans"
+        android:textSize="@dimen/_20ssp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/topBackgroundImage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.433" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="373dp"
-        android:layout_height="22dp"
-        android:fontFamily="@font/open_sans"
-        android:text="Welcome to our Student Community!"
-        android:textColor="#8C843E"
-        android:textAlignment="center"
-        android:textSize="@dimen/_9ssp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.157" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="@dimen/_300sdp"
-        android:layout_height="@dimen/_70ssp"
-        android:fontFamily="@font/open_sans"
-        android:text="We are a group of three enthusiastic students dedicated to providing comprehensive information about the various computers from labs in our college campus."
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/_9ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.237" />
+    <ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toBottomOf="@id/topBackgroundImage"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans"
-        android:text="Meet Our Team:"
-        android:textAlignment="center"
-        android:textColor="#8C843E"
-        android:textSize="@dimen/_9ssp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.467"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.329" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/vina"
-        android:layout_width="@dimen/_85sdp"
-        android:layout_height="@dimen/_85sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405"
-        app:srcCompat="@drawable/vina" />
+        <!-- About Us Section -->
 
-    <TextView
-        android:id="@+id/vinitaname"
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_60ssp"
-        android:background="@drawable/rounded_edittext"
-        android:fontFamily="@font/adamina"
-        android:text=" Vinita Patil"
-        android:textAlignment="center"
-        android:textSize="@dimen/_9ssp"
-        android:textColor="#8C843E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.4" />
+        <TextView
+            android:id="@+id/aboutUsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            android:textAlignment="center"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/_12ssp"/>
 
-    <ImageView
-        android:id="@+id/peru"
-        android:layout_width="@dimen/_85sdp"
-        android:layout_height="@dimen/_85sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        app:srcCompat="@drawable/peru" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aboutus"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_9ssp"
+            android:textAlignment="center"/>
 
-    <TextView
-        android:id="@+id/vinitarole"
-        android:layout_width="@dimen/_100ssp"
-        android:layout_height="@dimen/_30ssp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/open_sans"
-        android:text="Role: UI/UX Designer"
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/_9ssp"
-        app:layout_constraintBottom_toBottomOf="@+id/vinitaname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
-        app:layout_constraintStart_toStartOf="@+id/vinitaname"
-        app:layout_constraintTop_toTopOf="@+id/vinitaname"
-        app:layout_constraintVertical_bias="0.615" />
+        <!-- Meet Our Team Section -->
+        <TextView
+            android:id="@+id/meetOurTeamTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/meet"
+            android:textSize="@dimen/_11ssp"
+            android:textStyle="italic"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/yellow"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="@dimen/_310sdp"
-        android:layout_height="@dimen/_61ssp"
-        android:fontFamily="@font/open_sans"
-        android:text="Our team is passionate about leveraging blockchain technology to create secure and transparent solutions for the future.Together, we shared commitment to excellence and a passion for delivering good-quality results."
-        android:textColor="#FFFFFF"
-        android:textSize="@dimen/_9ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.939" />
+        <!-- Team Member 1 -->
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/open_sans"
-        android:text="Our Vision:"
-        android:textAlignment="center"
-        android:textColor="#8C843E"
-        android:textSize="@dimen/_9ssp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/aboutUsimg"
-        app:layout_constraintVertical_bias="0.827" />
 
+        <!-- Team Member 2 -->
+        <ImageView
+            android:id="@+id/teamMember1Image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/content1"
+            android:layout_gravity="center"
+            android:src="@drawable/vina" />
+
+        <TextView
+            android:id="@+id/teamMember1Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/aboutVinita"
+            android:layout_marginTop="@dimen/_9ssp"
+            android:layout_marginBottom="@dimen/_9ssp"
+            android:paddingStart="@dimen/_9ssp"
+            android:paddingEnd="@dimen/_20ssp"
+            android:paddingTop="@dimen/_5ssp"
+            android:paddingBottom="@dimen/_10ssp"/>
+
+        <ImageView
+            android:id="@+id/teamMember2Image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@string/content2"
+            android:src="@drawable/kunda"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/teamMember2Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/aboutKundan"
+            android:layout_marginTop="@dimen/_9ssp"
+            android:layout_marginBottom="@dimen/_9ssp"
+            android:paddingStart="@dimen/_9ssp"
+            android:paddingEnd="@dimen/_20ssp"
+            android:paddingTop="@dimen/_5ssp"
+            android:paddingBottom="@dimen/_10ssp"/>
+
+        <!-- Team Member 3 -->
+        <ImageView
+            android:id="@+id/teamMember3Image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/peru"
+            android:contentDescription="@string/content3"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/teamMember3Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/_11ssp"
+            android:text="@string/aboutPrerana"
+            android:layout_marginTop="@dimen/_9ssp"
+            android:layout_marginBottom="@dimen/_14ssp"
+            android:paddingStart="@dimen/_9ssp"
+            android:paddingEnd="@dimen/_20ssp"
+            android:paddingTop="@dimen/_5ssp"
+            android:paddingBottom="@dimen/_10ssp"/>
+        <TextView
+            android:id="@+id/ourvision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vision"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ourVision"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/_11ssp"
+            android:layout_marginTop="@dimen/_8ssp"
+            android:layout_marginBottom="@dimen/_8ssp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

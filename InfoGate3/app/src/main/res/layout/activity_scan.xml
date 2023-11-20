@@ -45,7 +45,8 @@
 
     <ImageView
         android:id="@+id/scanimageView"
-        android:layout_width="@dimen/_350sdp"
+        android:contentDescription="@string/scann"
+        android:layout_width="@dimen/_300sdp"
         android:layout_height="@dimen/_238sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.805"
@@ -58,7 +59,7 @@
         android:layout_width="@dimen/_210sdp"
         android:layout_height="@dimen/_210sdp"
         android:fontFamily="@font/open_sans"
-        android:text="SCAN HERE"
+        android:text="@string/scanHere"
         android:textColor="#FFFFFF"
         android:textSize="@dimen/_15ssp"
         app:icon="@drawable/scanner"
