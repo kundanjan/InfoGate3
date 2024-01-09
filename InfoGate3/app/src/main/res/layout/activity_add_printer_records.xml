@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#343434"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PrinterRecords">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/addPrinterHeading"
+        android:fontFamily="@font/open_sans"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Submit Button -->
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="371dp"
+        android:layout_height="684dp"
+        android:layout_margin="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Brand Name Section -->
+
+            <EditText
+                android:id="@+id/nameOfDevice"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:text="Printer"
+                android:inputType="text"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#AC9965"
+                android:textColorHint="#AC9965"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toTopOf="@+id/nameOfBrand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.723" />
+
+            <EditText
+                android:id="@+id/nameOfBrand"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/nameOfBrand"
+                android:inputType="text"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.182" />
+
+            <EditText
+                android:id="@+id/suppliersAddress"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:autofillHints="name"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/suppliersFullAddress"
+                android:inputType="text"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfBrand"
+                app:layout_constraintVertical_bias="0.017" />
+
+            <EditText
+                android:id="@+id/dateOfReceiptOfComputers"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:autofillHints="name"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/dateofReceipt"
+                android:inputType="date"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/suppliersAddress"
+                app:layout_constraintVertical_bias="0.023" />
+
+            <EditText
+                android:id="@+id/costOfComputers"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/cost"
+                android:inputType="number"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateOfReceiptOfComputers"
+                app:layout_constraintVertical_bias="0.021" />
+
+            <EditText
+                android:id="@+id/DSRPageNoandSRNo"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/dsrPageAndSrNo"
+                android:autofillHints="name"
+                android:inputType="text"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/costOfComputers"
+                app:layout_constraintVertical_bias="0.033" />
+
+            <EditText
+                android:id="@+id/nameOfDepartment"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/nameofDepartment"
+                android:inputType="text"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DSRPageNoandSRNo"
+                app:layout_constraintVertical_bias="0.048" />
+
+            <EditText
+                android:id="@+id/nameOfLab"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:autofillHints="name"
+                android:background="@drawable/edittext_background"
+                android:drawablePadding="@dimen/_16ssp"
+                android:ems="10"
+                android:fontFamily="@font/open_sans"
+                android:hint="@string/nameofLab"
+                android:inputType="text"
+                android:padding="@dimen/_8ssp"
+                android:textColor="#E1A500"
+                android:textColorHint="#E1A500"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfDepartment"
+                app:layout_constraintVertical_bias="0.064" />
+
+
+            <!-- Add other form fields as needed -->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!--    Button-->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/addbtn"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961"
+        app:rippleColor="#FFEB3B" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

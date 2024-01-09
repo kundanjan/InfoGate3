@@ -48,7 +48,25 @@
             android:name=".generateQR"
             android:exported="false" />
         <activity
-            android:name=".AddRecords"
+            android:name=".MonitorRecords"
+            android:exported="false" />
+        <activity
+            android:name=".CPURecords"
+            android:exported="false" />
+        <activity
+            android:name=".KeyboardRecords"
+            android:exported="false" />
+        <activity
+            android:name=".MouseRecords"
+            android:exported="false" />
+        <activity
+            android:name=".PrinterRecords"
+            android:exported="false" />
+        <activity
+            android:name=".ScannerRecords"
+            android:exported="false" />
+        <activity
+            android:name=".ViewRecords"
             android:exported="false" />
 
 
