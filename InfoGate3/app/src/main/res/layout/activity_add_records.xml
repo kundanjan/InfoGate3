@@ -22,17 +22,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Submit Button -->
+
+    <!--    Button-->
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="371dp"
-        android:layout_height="684dp"
+        android:layout_width="425dp"
+        android:layout_height="752dp"
         android:layout_margin="16dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -45,10 +49,10 @@
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
+                android:autofillHints="name"
                 android:background="@drawable/edittext_background"
                 android:drawablePadding="@dimen/_16ssp"
                 android:ems="10"
-                android:autofillHints="name"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/nameOfBrand"
                 android:inputType="text"
@@ -67,8 +71,8 @@
                 android:id="@+id/suppliersAddress"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
-                android:autofillHints="name"
                 android:layout_weight="1"
+                android:autofillHints="name"
                 android:background="@drawable/edittext_background"
                 android:drawablePadding="@dimen/_16ssp"
                 android:ems="10"
@@ -91,9 +95,9 @@
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
+                android:autofillHints="name"
                 android:background="@drawable/edittext_background"
                 android:drawablePadding="@dimen/_16ssp"
-                android:autofillHints="name"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/dateofReceipt"
@@ -104,10 +108,10 @@
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/suppliersAddress"
-                app:layout_constraintVertical_bias="0.023" />
+                app:layout_constraintVertical_bias="0.058" />
 
             <EditText
                 android:id="@+id/costOfComputers"
@@ -127,22 +131,22 @@
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.081"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/dateOfReceiptOfComputers"
-                app:layout_constraintVertical_bias="0.021" />
+                app:layout_constraintVertical_bias="0.045" />
 
             <EditText
                 android:id="@+id/DSRPageNoandSRNo"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
+                android:autofillHints="name"
                 android:background="@drawable/edittext_background"
                 android:drawablePadding="@dimen/_16ssp"
                 android:ems="10"
                 android:fontFamily="@font/open_sans"
                 android:hint="@string/dsrPageAndSrNo"
-                android:autofillHints="name"
                 android:inputType="text"
                 android:padding="@dimen/_8ssp"
                 android:textColor="#E1A500"
@@ -178,6 +182,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/DSRPageNoandSRNo"
                 app:layout_constraintVertical_bias="0.048" />
 
+
             <EditText
                 android:id="@+id/nameOfLab"
                 android:layout_width="@dimen/_280sdp"
@@ -206,7 +211,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <!--    Button-->
     <Button
         android:id="@+id/button3"
         android:layout_width="@dimen/_100sdp"

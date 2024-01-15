@@ -9,16 +9,18 @@ android:layout_height="match_parent"
 android:background="#343434">
 
 <!-- Top Background Image -->
-<ImageView
-    android:id="@+id/topBackgroundImage"
-    android:contentDescription="@string/content4"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/_120sdp"
-    android:src="@drawable/top_background"
-    android:scaleType="centerCrop"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/topBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:contentDescription="@string/content4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/aboutUsTitle"
@@ -37,153 +39,157 @@ android:background="#343434">
 
 
     <ScrollView
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_constraintTop_toBottomOf="@id/topBackgroundImage"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBackgroundImage"
+        app:layout_constraintVertical_bias="0.0">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <!-- About Us Section -->
-
-        <TextView
-            android:id="@+id/aboutUsDescription"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:textStyle="bold"
-            android:textColor="@color/yellow"
-            android:textAlignment="center"
-            android:fontFamily="@font/open_sans"
-            android:textSize="@dimen/_12ssp"/>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/aboutus"
-            android:fontFamily="@font/open_sans"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_11ssp"
-            android:layout_marginTop="@dimen/_9ssp"
-            android:textAlignment="center"/>
+            <!-- About Us Section -->
 
-        <!-- Meet Our Team Section -->
-        <TextView
-            android:id="@+id/meetOurTeamTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/meet"
-            android:textSize="@dimen/_11ssp"
-            android:textStyle="italic"
-            android:fontFamily="@font/open_sans"
-            android:textColor="@color/yellow"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/aboutUsDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/welcome"
+                android:textAlignment="center"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
 
-        <!-- Team Member 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9ssp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/aboutus"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
 
+            <!-- Meet Our Team Section -->
+            <TextView
+                android:id="@+id/meetOurTeamTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/meet"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_11ssp"
+                android:textStyle="italic" />
 
-        <!-- Team Member 2 -->
-        <ImageView
-            android:id="@+id/teamMember1Image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/content1"
-            android:layout_gravity="center"
-            android:src="@drawable/vina" />
-
-        <TextView
-            android:id="@+id/teamMember1Description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_edittext"
-            android:textColor="@color/white"
-            android:fontFamily="@font/open_sans"
-            android:textSize="@dimen/_11ssp"
-            android:text="@string/aboutVinita"
-            android:layout_marginTop="@dimen/_9ssp"
-            android:layout_marginBottom="@dimen/_9ssp"
-            android:paddingStart="@dimen/_9ssp"
-            android:paddingEnd="@dimen/_20ssp"
-            android:paddingTop="@dimen/_5ssp"
-            android:paddingBottom="@dimen/_10ssp"/>
-
-        <ImageView
-            android:id="@+id/teamMember2Image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/content2"
-            android:src="@drawable/kunda"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/teamMember2Description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_edittext"
-            android:textColor="@color/white"
-            android:fontFamily="@font/open_sans"
-            android:textSize="@dimen/_11ssp"
-            android:text="@string/aboutKundan"
-            android:layout_marginTop="@dimen/_9ssp"
-            android:layout_marginBottom="@dimen/_9ssp"
-            android:paddingStart="@dimen/_9ssp"
-            android:paddingEnd="@dimen/_20ssp"
-            android:paddingTop="@dimen/_5ssp"
-            android:paddingBottom="@dimen/_10ssp"/>
-
-        <!-- Team Member 3 -->
-        <ImageView
-            android:id="@+id/teamMember3Image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/peru"
-            android:contentDescription="@string/content3"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/teamMember3Description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_edittext"
-            android:textColor="@color/white"
-            android:fontFamily="@font/open_sans"
-            android:textSize="@dimen/_11ssp"
-            android:text="@string/aboutPrerana"
-            android:layout_marginTop="@dimen/_9ssp"
-            android:layout_marginBottom="@dimen/_14ssp"
-            android:paddingStart="@dimen/_9ssp"
-            android:paddingEnd="@dimen/_20ssp"
-            android:paddingTop="@dimen/_5ssp"
-            android:paddingBottom="@dimen/_10ssp"/>
-        <TextView
-            android:id="@+id/ourvision"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/vision"
-            android:textColor="@color/yellow"
-            android:fontFamily="@font/open_sans"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="italic"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/ourVision"
-            android:textColor="@color/white"
-            android:fontFamily="@font/open_sans"
-            android:textSize="@dimen/_11ssp"
-            android:layout_marginTop="@dimen/_8ssp"
-            android:layout_marginBottom="@dimen/_8ssp"
-            android:textAlignment="center"/>
+            <!-- Team Member 1 -->
 
 
-    </LinearLayout>
-</ScrollView>
+            <!-- Team Member 2 -->
+
+            <ImageView
+                android:id="@+id/teamMember1Image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/content1"
+                android:src="@drawable/vina" />
+
+            <TextView
+                android:id="@+id/teamMember1Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9ssp"
+                android:layout_marginBottom="@dimen/_9ssp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/open_sans"
+                android:paddingStart="@dimen/_9ssp"
+                android:paddingTop="@dimen/_5ssp"
+                android:paddingEnd="@dimen/_20ssp"
+                android:paddingBottom="@dimen/_10ssp"
+                android:text="@string/aboutVinita"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <ImageView
+                android:id="@+id/teamMember2Image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/content2"
+                android:src="@drawable/kunda" />
+
+            <TextView
+                android:id="@+id/teamMember2Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9ssp"
+                android:layout_marginBottom="@dimen/_9ssp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/open_sans"
+                android:paddingStart="@dimen/_9ssp"
+                android:paddingTop="@dimen/_5ssp"
+                android:paddingEnd="@dimen/_20ssp"
+                android:paddingBottom="@dimen/_10ssp"
+                android:text="@string/aboutKundan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <!-- Team Member 3 -->
+            <ImageView
+                android:id="@+id/teamMember3Image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/content3"
+                android:src="@drawable/peru" />
+
+            <TextView
+                android:id="@+id/teamMember3Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_9ssp"
+                android:layout_marginBottom="@dimen/_14ssp"
+                android:background="@drawable/rounded_edittext"
+                android:fontFamily="@font/open_sans"
+                android:paddingStart="@dimen/_9ssp"
+                android:paddingTop="@dimen/_5ssp"
+                android:paddingEnd="@dimen/_20ssp"
+                android:paddingBottom="@dimen/_10ssp"
+                android:text="@string/aboutPrerana"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+            <TextView
+                android:id="@+id/ourvision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/vision"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8ssp"
+                android:layout_marginBottom="@dimen/_8ssp"
+                android:fontFamily="@font/open_sans"
+                android:text="@string/ourVision"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11ssp" />
+
+
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

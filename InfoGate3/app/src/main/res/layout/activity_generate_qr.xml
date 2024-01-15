@@ -7,45 +7,31 @@
     android:layout_margin="10dp"
     tools:context=".generateQR">
 
-    <EditText
-        android:id="@+id/esit_text"
-        android:layout_width="match_parent"
-        android:layout_height="40dp" />
 
     <ImageView
         android:id="@+id/qr_code"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:layout_below="@+id/gbutton"
-        android:layout_marginTop="3dp"
-        android:scaleType="fitCenter" />
-
-    <Button
-        android:id="@+id/gbutton"
-        android:layout_width="146dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/print"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="117dp"
-        android:text="Generate" />
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="143dp"
+        android:scaleType="fitCenter" />
 
     <Button
         android:id="@+id/print"
         android:layout_width="146dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/qr_code"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="126dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="609dp"
         android:layout_marginEnd="120dp"
-        android:layout_marginBottom="20dp"
-        android:textSize="20dp"
-        android:text="print" />
+        android:layout_marginBottom="55dp"
+        android:text="print"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>
