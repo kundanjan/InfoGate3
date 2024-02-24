@@ -35,22 +35,23 @@ public class ScannerRecords extends AppCompatActivity {
         nameofLab =(EditText) findViewById(R.id.nameOfLabS);
         btn = (Button) findViewById(R.id.scanner_btn);
 
-        Intent intent = new Intent(ScannerRecords.this, generateQR.class);
-        String nameDevice = nameofDevice.getText().toString();
-        String nameBrand = nameofBrand.getText().toString();
-        String suppaddress = supplierAddress.getText().toString();
-        String dateReceipt = dateofReciept.getText().toString();
-        String costcomp = costofComp.getText().toString();
-        String DSR_Sr = DSR.getText().toString();
-        String nameDepart = nameofDepart.getText().toString();
-        String nameLab = nameofLab.getText().toString();
-        intent.putExtra("key1",nameDevice);
+
         // Generate QR code
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(ScannerRecords.this, generateQR.class);
+                String nameDevice = nameofDevice.getText().toString();
+                String nameBrand = nameofBrand.getText().toString();
+                String suppaddress = supplierAddress.getText().toString();
+                String dateReceipt = dateofReciept.getText().toString();
+                String costcomp = costofComp.getText().toString();
+                String DSR_Sr = DSR.getText().toString();
+                String nameDepart = nameofDepart.getText().toString();
+                String nameLab = nameofLab.getText().toString();
+                intent.putExtra("key1",nameDevice);
                 if (nameDevice.isEmpty()||nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
-                    Toast.makeText(ScannerRecords.this, "Please Enter Name of Device", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ScannerRecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
                 }else {
 
 

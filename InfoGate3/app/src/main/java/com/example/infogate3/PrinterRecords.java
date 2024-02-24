@@ -32,24 +32,25 @@ public class PrinterRecords extends AppCompatActivity {
             nameofDepartP =(EditText) findViewById(R.id.nameOfDepartmentP);
             nameofLabP =(EditText) findViewById(R.id.nameOfLabP);
             btn = (Button) findViewById(R.id.printer_btn);
-        String nameDevice = namePrinter.getText().toString();
-        String nameBrand = nameBrandP.getText().toString();
-        String suppaddress = supplierAddressP.getText().toString();
-        String dateReceipt = dateofRecieptP.getText().toString();
-        String costcomp = costofCompP.getText().toString();
-        String DSR_Sr = DSRP.getText().toString();
-        String nameDepart = nameofDepartP.getText().toString();
-        String nameLab = nameofLabP.getText().toString();
+
             // Generate QR code
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    Intent intent = new Intent(PrinterRecords.this, generateQR.class);
+                    String nameDevice = namePrinter.getText().toString();
+                    String nameBrand = nameBrandP.getText().toString();
+                    String suppaddress = supplierAddressP.getText().toString();
+                    String dateReceipt = dateofRecieptP.getText().toString();
+                    String costcomp = costofCompP.getText().toString();
+                    String DSR_Sr = DSRP.getText().toString();
+                    String nameDepart = nameofDepartP.getText().toString();
+                    String nameLab = nameofLabP.getText().toString();
 
-                    if (nameDevice.isEmpty() || nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
-                        Toast.makeText(PrinterRecords.this, "Please Enter Name of Device", Toast.LENGTH_LONG).show();
+                    if ( nameDevice.isEmpty() || nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
+                        Toast.makeText(PrinterRecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
                     } else {
 
-                        Intent intent = new Intent(PrinterRecords.this, generateQR.class);
 
                         intent.putExtra("key1", "Name of Device: " + nameDevice);
                         intent.putExtra("key2", "\nName of Brand :" + nameBrand);

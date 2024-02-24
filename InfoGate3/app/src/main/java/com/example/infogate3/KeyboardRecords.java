@@ -34,23 +34,23 @@ public class KeyboardRecords extends AppCompatActivity {
         nameofDepartK =(EditText) findViewById(R.id.nameOfDepartmentK);
         nameofLabK =(EditText) findViewById(R.id.nameOfLabK);
         btn = (Button) findViewById(R.id.keyboard_btn);
-        Intent intent = new Intent(KeyboardRecords.this, generateQR.class);
-        String nameDevice = nameofDeviceK.getText().toString();
-        String nameBrand = nameofBrandK.getText().toString();
-        String suppaddress = supplierAddressK.getText().toString();
-        String dateReceipt = dateofRecieptK.getText().toString();
-        String costcomp = costofCompK.getText().toString();
-        String DSR_Sr = DSRK.getText().toString();
-        String nameDepart = nameofDepartK.getText().toString();
-        String nameLab = nameofLabK.getText().toString();
+
         // Generate QR code
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
+                Intent intent = new Intent(KeyboardRecords.this, generateQR.class);
+                String nameDevice = nameofDeviceK.getText().toString();
+                String nameBrand = nameofBrandK.getText().toString();
+                String suppaddress = supplierAddressK.getText().toString();
+                String dateReceipt = dateofRecieptK.getText().toString();
+                String costcomp = costofCompK.getText().toString();
+                String DSR_Sr = DSRK.getText().toString();
+                String nameDepart = nameofDepartK.getText().toString();
+                String nameLab = nameofLabK.getText().toString();
                 if (nameDevice.isEmpty()||nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
-                    Toast.makeText(KeyboardRecords.this, "Please Enter Name of Device", Toast.LENGTH_LONG).show();
+                    Toast.makeText(KeyboardRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
                 }else {
 
                     intent.putExtra("key1","Name of Device: "+nameDevice);
