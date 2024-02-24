@@ -150,8 +150,9 @@ public class Scanner extends AppCompatActivity {
                     Barcode barcode = barcodes.valueAt(0);
                     String barcodeValue = barcode.displayValue;
                     runOnUiThread(() -> {
-                        Toast.makeText(Scanner.this, "Scanned: " + barcodeValue, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Scanner.this, "Scanned: " + barcodeValue, Toast.LENGTH_LONG).show();
                         // Do something with the scanned value
+
                     });
                 }
             }

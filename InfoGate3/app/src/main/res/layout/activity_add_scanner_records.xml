@@ -56,7 +56,7 @@
                 android:inputType="text"
                 android:padding="@dimen/_8ssp"
                 android:textColor="#AC9965"
-                android:textColorHint="#AC9965"
+                android:textColorHint="#E1A500"
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toTopOf="@+id/nameOfBrandS"
                 app:layout_constraintEnd_toEndOf="parent"

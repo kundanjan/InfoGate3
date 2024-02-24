@@ -35,25 +35,26 @@ public class MouseRecords extends AppCompatActivity {
         nameofLab =(EditText) findViewById(R.id.nameOfLabU);
         btn = (Button) findViewById(R.id.mouse_btn);
 
-        Intent intent = new Intent(MouseRecords.this, generateQR.class);
-        String nameDevice = nameofDevice.getText().toString();
-        String nameBrand = nameofBrand.getText().toString();
-        String suppaddress = supplierAddress.getText().toString();
-        String dateReceipt = dateofReciept.getText().toString();
-        String costcomp = costofComp.getText().toString();
-        String DSR_Sr = DSR.getText().toString();
-        String nameDepart = nameofDepart.getText().toString();
-        String nameLab = nameofLab.getText().toString();
+
         // Generate QR code
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(MouseRecords.this, generateQR.class);
+                String nameDevice = nameofDevice.getText().toString();
+                String nameBrand = nameofBrand.getText().toString();
+                String suppaddress = supplierAddress.getText().toString();
+                String dateReceipt = dateofReciept.getText().toString();
+                String costcomp = costofComp.getText().toString();
+                String DSR_Sr = DSR.getText().toString();
+                String nameDepart = nameofDepart.getText().toString();
+                String nameLab = nameofLab.getText().toString();
 
                 if (nameDevice.isEmpty()||nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
-                    Toast.makeText(MouseRecords.this, "Please Enter Name of Device", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MouseRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
                 }else {
 
-                    intent.putExtra("key1","Name of Device: "+nameDevice);
+                intent.putExtra("key1","\nName of Device: "+nameDevice);
                 intent.putExtra("key2","\nName of Brand :"+nameBrand);
                 intent.putExtra("key3","\nsupplier Address: "+suppaddress);
                 intent.putExtra("key4","\nDate of Receipt: "+dateReceipt);
