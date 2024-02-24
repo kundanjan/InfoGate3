@@ -240,6 +240,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
         android:text="@string/addbtn"
+
         android:textColor="@color/white"
         android:textSize="@dimen/_18ssp"
         app:layout_constraintBottom_toBottomOf="parent"
