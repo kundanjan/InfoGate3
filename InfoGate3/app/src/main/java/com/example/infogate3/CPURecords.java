@@ -31,7 +31,6 @@ public class CPURecords extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_cpu_records);
-        nameofDevice = (EditText) findViewById(R.id.nameOfDevice);
         nameofBrand =(EditText) findViewById(R.id.nameOfBrand);
         supplierAddress =(EditText) findViewById(R.id.suppliersAddress);
         dateofReciept =(EditText) findViewById(R.id.dateOfReceiptOfComputers);
