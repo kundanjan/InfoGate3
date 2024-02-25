@@ -43,7 +43,7 @@
 
             <EditText
                 android:id="@+id/nameOfBrandM"
-                android:layout_width="@dimen/_280sdp"
+                android:layout_width="@dimen/_250sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
                 android:autofillHints="name"
