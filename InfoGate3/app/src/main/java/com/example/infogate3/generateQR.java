@@ -36,7 +36,7 @@ public class generateQR extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.qr_code);
 
         Intent intent=new Intent();
-        String t1=getIntent().getStringExtra("Key1");
+        String t1=getIntent().getStringExtra("key1");
         String t2=getIntent().getStringExtra("key2");
         String t3=getIntent().getStringExtra("key3");
         String t4=getIntent().getStringExtra("key4");
