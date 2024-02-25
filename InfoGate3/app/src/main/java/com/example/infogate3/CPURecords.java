@@ -17,7 +17,6 @@ import com.google.zxing.common.BitMatrix;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 public class CPURecords extends AppCompatActivity {
 
-    EditText nameofDevice;
     EditText nameofBrand;
     EditText supplierAddress;
     EditText dateofReciept;
@@ -46,7 +45,6 @@ public class CPURecords extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CPURecords.this, generateQR.class);
-                String nameDevice = nameofDevice.getText().toString();
                 String nameBrand = nameofBrand.getText().toString();
                 String suppaddress = supplierAddress.getText().toString();
                 String dateReceipt = dateofReciept.getText().toString();
@@ -54,13 +52,12 @@ public class CPURecords extends AppCompatActivity {
                 String DSR_Sr = DSR.getText().toString();
                 String nameDepart = nameofDepart.getText().toString();
                 String nameLab = nameofLab.getText().toString();
-                if (nameDevice.isEmpty()||nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
+                if (nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
                     Toast.makeText(CPURecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
                 }else {
 
 
 
-                    intent.putExtra("key1","Name of Device: "+nameDevice);
                     intent.putExtra("key2","\nName of Brand: "+nameBrand);
                     intent.putExtra("key3","\nsupplier Address: "+suppaddress);
                     intent.putExtra("key4","\nDate of Receipt: "+dateReceipt);

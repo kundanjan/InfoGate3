@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PrinterRecords extends AppCompatActivity {
-    EditText namePrinter;
     EditText nameBrandP;
     EditText supplierAddressP;
     EditText dateofRecieptP;
@@ -23,7 +22,6 @@ public class PrinterRecords extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_printer_records);
-            namePrinter = (EditText) findViewById(R.id.nameOfDeviceP);
             nameBrandP =(EditText) findViewById(R.id.nameOfBrandP);
             supplierAddressP =(EditText) findViewById(R.id.suppliersAddressP);
             dateofRecieptP =(EditText) findViewById(R.id.dateOfReceiptOfComputersP);
@@ -38,7 +36,6 @@ public class PrinterRecords extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(PrinterRecords.this, generateQR.class);
-                    String nameDevice = namePrinter.getText().toString();
                     String nameBrand = nameBrandP.getText().toString();
                     String suppaddress = supplierAddressP.getText().toString();
                     String dateReceipt = dateofRecieptP.getText().toString();
@@ -47,12 +44,10 @@ public class PrinterRecords extends AppCompatActivity {
                     String nameDepart = nameofDepartP.getText().toString();
                     String nameLab = nameofLabP.getText().toString();
 
-                    if ( nameDevice.isEmpty() || nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
+                    if (nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
                         Toast.makeText(PrinterRecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
                     } else {
 
-
-                        intent.putExtra("key1","Name of Device: "+nameDevice);
                         intent.putExtra("key2","\nName of Brand: "+nameBrand);
                         intent.putExtra("key3","\nsupplier Address: "+suppaddress);
                         intent.putExtra("key4","\nDate of Receipt: "+dateReceipt);
