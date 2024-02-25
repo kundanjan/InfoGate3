@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,11 +32,11 @@ public class PrinterRecords extends AppCompatActivity {
             nameofDepartP =(EditText) findViewById(R.id.nameOfDepartmentP);
             nameofLabP =(EditText) findViewById(R.id.nameOfLabP);
             btn = (Button) findViewById(R.id.printer_btn);
+
             // Generate QR code
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
                     Intent intent = new Intent(PrinterRecords.this, generateQR.class);
                     String nameDevice = namePrinter.getText().toString();
                     String nameBrand = nameBrandP.getText().toString();
@@ -45,16 +46,22 @@ public class PrinterRecords extends AppCompatActivity {
                     String DSR_Sr = DSRP.getText().toString();
                     String nameDepart = nameofDepartP.getText().toString();
                     String nameLab = nameofLabP.getText().toString();
-                    intent.putExtra("key1",nameDevice);
-                    intent.putExtra("key2",nameBrand);
-                    intent.putExtra("key3",suppaddress);
-                    intent.putExtra("key4",dateReceipt);
-                    intent.putExtra("key5",costcomp);
-                    intent.putExtra("key6",DSR_Sr);
-                    intent.putExtra("key7",nameDepart);
-                    intent.putExtra("key8",nameLab);
 
-                    startActivity(intent);
+                    if ( nameDevice.isEmpty() || nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
+                        Toast.makeText(PrinterRecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
+                    } else {
+
+
+                        intent.putExtra("key1", "Name of Device: " + nameDevice);
+                        intent.putExtra("key2", "\nName of Brand :" + nameBrand);
+                        intent.putExtra("key3", "\nsupplier Address: " + suppaddress);
+                        intent.putExtra("key4", "\nDate of Receipt: " + dateReceipt);
+                        intent.putExtra("key5", "\nCost of device" + costcomp);
+                        intent.putExtra("key6", "\nDSR page & SR no.: " + DSR_Sr);
+                        intent.putExtra("key7", "\nName of Department: " + nameDepart);
+                        intent.putExtra("key8", "\n Name of Lab" + nameLab);
+                        startActivity(intent);
+                    }
                 }
             });
         }

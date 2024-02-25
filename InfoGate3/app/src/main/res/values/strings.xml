@@ -4,15 +4,15 @@
     <string name="navigration_close">Close Navigation drawer</string>
     <string name="scan">Scan here for information about your PC.</string>
 
-<!--    activity_main-->
+    <!--    activity_main-->
     <string name="blackLogo">blackLogo</string>
     <string name="whiteLogo">whiteLogo</string>
 
-<!--    activity_scan-->
+    <!--    activity_scan-->
     <string name="scanHere">SCAN HERE</string>
     <string name="scann">Scan</string>
 
-<!--    about Us-->
+    <!--    about Us-->
     <string name="ourVision">Our team is passionate about leveraging blockchain technology to create secure and transparent solutions for the future.Together, we shared commitment to excellence and a passion for delivering good-quality results.</string>
     <string name="aboutus">We are a group of three enthusiastic students dedicated to providing comprehensive information about the various computers from labs in our college campus.</string>
     <string name="welcome">Welcome to our Student Community!</string>
@@ -27,13 +27,13 @@
     <string name="aboutUsHeading">About Us</string>
     <string name="content4">TopBG</string>
 
-<!--    About App-->
-<string name="aboutappHeading">ABOUT APP</string>
+    <!--    About App-->
+    <string name="aboutappHeading">ABOUT APP</string>
     <string name="aboutAppDescription">The name of our app is InfoGate.This app has been created for computer labs using blockchain. Through this app, the user can scan the QR code installed on the computer and access all its information, such as which department it belongs to and the date of its installation.\n\nIn this app, there are options for both user login and admin login. A user can log in and scan, and then obtain the complete information. An admin can retrieve all the records stored in the database using blockchain and can also add records. After adding records, a QR code will be generated, which can then be printed as well.\n\nOur mission is to create a user-friendly app that serves as a one-stop destination for college faculty to access comprehensive information about our college\'s computer lab.\n\nThank you for using our InfoGate App. We hope you find it informative and valuable for student\'s academic journey\!</string>
     <string name="content">About App</string>
 
 
-<!--    Admin Login-->
+    <!--    Admin Login-->
     <string name="adminLoginHeading">Admin Login</string>
     <string name="btnText">LOGIN</string>
     <string name="passHint">Password</string>
@@ -41,14 +41,13 @@
     <string name="contentAdmin">Admin TopBG Image</string>
     <string name="adminArrow">Admin Arrow</string>
 
-<!--    after Admin Login-->
+    <!--    after Admin Login-->
     <string name="addRecordsBtnText">ADD RECORDS</string>
     <string name="viewRecordsBtnText">VIEW RECORDS</string>
     <string name="topImage">Top Image</string>
 
 
-
-<!--    Add Records-->
+    <!--    Add Records-->
     <string name="addMonitorHeading">ADD MONITOR</string>
     <string name="addCPUHeading">ADD CPU</string>
     <string name="addKeyboardHeading">ADD KEYBOARD</string>
@@ -65,7 +64,7 @@
     <string name="nameofLab">Name of Laboratory</string>
     <string name="addbtn">ADD</string>
 
-<!--    activity_getInfo-->
+    <!--    activity_getInfo-->
     <string name="records">Records</string>
     <string name="topImg">TopImage</string>
 </resources>

@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -41,12 +43,12 @@ public class MonitorRecords extends AppCompatActivity {
         nameofDepartM =(EditText) findViewById(R.id.nameOfDepartmentM);
         nameofLabM =(EditText) findViewById(R.id.nameOfLabM);
         btn = (Button) findViewById(R.id.monitor_btn);
+
+
         // Generate QR code
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(MonitorRecords.this, generateQR.class);
                 String nameDevice = nameofDeviceM.getText().toString();
                 String nameBrand = nameofBrandM.getText().toString();
                 String suppaddress = supplierAddressM.getText().toString();
@@ -55,16 +57,23 @@ public class MonitorRecords extends AppCompatActivity {
                 String DSR_Sr = DSRM.getText().toString();
                 String nameDepart = nameofDepartM.getText().toString();
                 String nameLab = nameofLabM.getText().toString();
-                intent.putExtra("key1",nameDevice);
-                intent.putExtra("key2",nameBrand);
-                intent.putExtra("key3",suppaddress);
-                intent.putExtra("key4",dateReceipt);
-                intent.putExtra("key5",costcomp);
-                intent.putExtra("key6",DSR_Sr);
-                intent.putExtra("key7",nameDepart);
-                intent.putExtra("key8",nameLab);
 
-                startActivity(intent);
+                Intent intent = new Intent(MonitorRecords.this, generateQR.class);
+                if (nameDevice.isEmpty() || nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
+                    Toast.makeText(MonitorRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
+                } else {
+
+                    intent.putExtra("key1", "\nName of Device: " + nameDevice);
+                    intent.putExtra("key2", "\nName of Brand :" + nameBrand);
+                    intent.putExtra("key3", "\nsupplier Address: " + suppaddress);
+                    intent.putExtra("key4", "\nDate of Receipt: " + dateReceipt);
+                    intent.putExtra("key5", "\nCost of device" + costcomp);
+                    intent.putExtra("key6", "\nDSR page & SR no.: " + DSR_Sr);
+                    intent.putExtra("key7", "\nName of Department: " + nameDepart);
+                    intent.putExtra("key8", "\n Name of Lab" + nameLab);
+
+                    startActivity(intent);
+                }
             }
         });
     }

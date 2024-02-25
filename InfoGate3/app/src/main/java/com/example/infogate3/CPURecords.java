@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -38,12 +40,12 @@ public class CPURecords extends AppCompatActivity {
         nameofDepart =(EditText) findViewById(R.id.nameOfDepartment);
         nameofLab =(EditText) findViewById(R.id.nameOfLab);
         btn = (Button) findViewById(R.id.cpubtn);
+
+
         // Generate QR code
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(CPURecords.this, generateQR.class);
                 String nameDevice = nameofDevice.getText().toString();
                 String nameBrand = nameofBrand.getText().toString();
                 String suppaddress = supplierAddress.getText().toString();
@@ -52,17 +54,25 @@ public class CPURecords extends AppCompatActivity {
                 String DSR_Sr = DSR.getText().toString();
                 String nameDepart = nameofDepart.getText().toString();
                 String nameLab = nameofLab.getText().toString();
-                intent.putExtra("key1",nameDevice);
-                intent.putExtra("key2",nameBrand);
-                intent.putExtra("key3",suppaddress);
-                intent.putExtra("key4",dateReceipt);
-                intent.putExtra("key5",costcomp);
-                intent.putExtra("key6",DSR_Sr);
-                intent.putExtra("key7",nameDepart);
-                intent.putExtra("key8",nameLab);
+                if (nameDevice.isEmpty()||nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
+                    Toast.makeText(CPURecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
+                }else {
 
-                startActivity(intent);
+
+                    Intent intent = new Intent(CPURecords.this, generateQR.class);
+                    intent.putExtra("key1", "Name of Device: " + nameDevice);
+                    intent.putExtra("key2", "\nName of Brand :" + nameBrand);
+                    intent.putExtra("key3", "\nsupplier Address: " + suppaddress);
+                    intent.putExtra("key4", "\nDate of Receipt: " + dateReceipt);
+                    intent.putExtra("key5", "\nCost of device" + costcomp);
+                    intent.putExtra("key6", "\nDSR page & SR no.: " + DSR_Sr);
+                    intent.putExtra("key7", "\nName of Department: " + nameDepart);
+                    intent.putExtra("key8", "\n Name of Lab" + nameLab);
+
+                    startActivity(intent);
+                }
             }
         });
     }
+
 }

@@ -68,9 +68,6 @@
         <activity
             android:name=".ViewRecords"
             android:exported="false" />
-        <activity
-            android:name=".ViewMonitors"
-            android:exported="false" />
 
 
         <activity
