@@ -6,22 +6,24 @@
     android:layout_height="match_parent"
     android:background="#343434"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".PrinterRecords">
+    tools:context=".ScannerRecords">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="1dp"
-        android:text="@string/addPrinterHeading"
         android:fontFamily="@font/open_sans"
-        android:textColor="@color/white"
+        android:text="@string/addScannerHeading"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="@dimen/_20ssp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -41,9 +43,8 @@
 
             <!-- Brand Name Section -->
 
-
             <EditText
-                android:id="@+id/nameOfBrandP"
+                android:id="@+id/nameOfBrandS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
@@ -63,10 +64,10 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.091" />
+                app:layout_constraintVertical_bias="0.103" />
 
             <EditText
-                android:id="@+id/suppliersAddressP"
+                android:id="@+id/suppliersAddressS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:autofillHints="name"
@@ -85,11 +86,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameOfBrandP"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfBrandS"
                 app:layout_constraintVertical_bias="0.017" />
 
             <EditText
-                android:id="@+id/dateOfReceiptOfComputersP"
+                android:id="@+id/dateOfReceiptOfComputersS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
@@ -108,11 +109,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/suppliersAddressP"
+                app:layout_constraintTop_toBottomOf="@+id/suppliersAddressS"
                 app:layout_constraintVertical_bias="0.023" />
 
             <EditText
-                android:id="@+id/costOfComputersP"
+                android:id="@+id/costOfComputersS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
@@ -131,11 +132,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dateOfReceiptOfComputersP"
+                app:layout_constraintTop_toBottomOf="@+id/dateOfReceiptOfComputersS"
                 app:layout_constraintVertical_bias="0.021" />
 
             <EditText
-                android:id="@+id/DSRPageNoandSRNoP"
+                android:id="@+id/DSRPageNoandSRNoS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
@@ -154,11 +155,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/costOfComputersP"
+                app:layout_constraintTop_toBottomOf="@+id/costOfComputersS"
                 app:layout_constraintVertical_bias="0.033" />
 
             <EditText
-                android:id="@+id/nameOfDepartmentP"
+                android:id="@+id/nameOfDepartmentS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
@@ -177,11 +178,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/DSRPageNoandSRNoP"
+                app:layout_constraintTop_toBottomOf="@+id/DSRPageNoandSRNoS"
                 app:layout_constraintVertical_bias="0.048" />
 
             <EditText
-                android:id="@+id/nameOfLabP"
+                android:id="@+id/nameOfLabS"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_weight="1"
@@ -200,7 +201,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameOfDepartmentP"
+                app:layout_constraintTop_toBottomOf="@+id/nameOfDepartmentS"
                 app:layout_constraintVertical_bias="0.064" />
 
 
@@ -210,7 +211,7 @@
 
     <!--    Button-->
     <Button
-        android:id="@+id/printer_btn"
+        android:id="@+id/scanner_btn"
         android:layout_width="@dimen/_100sdp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"
@@ -222,7 +223,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921"
+        app:layout_constraintVertical_bias="0.949"
         app:rippleColor="#FFEB3B" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
