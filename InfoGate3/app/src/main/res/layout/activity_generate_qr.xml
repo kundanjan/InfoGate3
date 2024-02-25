@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#343434"
     tools:context=".generateQR">
+
+    <ImageView
+        android:id="@+id/getimageView"
+        android:layout_width="@dimen/_305sdp"
+        android:layout_height="279dp"
+        android:contentDescription="@string/topImage"
+        app:srcCompat="@drawable/top_background" />
 
 
     <ImageView
         android:id="@+id/qr_code"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="200dp"
         android:scaleType="fitCenter" />
-
 
     <Button
         android:id="@+id/print"
         android:layout_width="wrap_content"
-        android:layout_height="73dp"
+        android:layout_height="118dp"
         android:layout_below="@+id/qr_code"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="52dp"
-        android:text="print"
-        android:textSize="20dp" />
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="82dp"
+        android:text="Print"
+        android:fontFamily="@font/open_sans"
+        android:textSize="20dp"
+        app:rippleColor="#FFEA00" />
 
 
 </RelativeLayout>
