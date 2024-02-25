@@ -25,7 +25,7 @@
     <!-- Submit Button -->
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="@dimen/_290sdp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_17sdp"
         android:fillViewport="true"
@@ -36,32 +36,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <!-- Brand Name Section -->
-
-            <EditText
-                android:id="@+id/nameOfDeviceM"
-                android:layout_width="@dimen/_280sdp"
-                android:layout_height="@dimen/_50sdp"
-                android:layout_weight="1"
-                android:autofillHints="name"
-                android:background="@drawable/edittext_background"
-                android:drawablePadding="@dimen/_16ssp"
-                android:ems="10"
-                android:fontFamily="@font/open_sans"
-             android:hint="Name of Monitor"
-                android:inputType="text"
-                android:padding="@dimen/_8ssp"
-                android:textColor="#AC9965"
-                android:textColorHint="#AC9965"
-                android:textSize="@dimen/_15ssp"
-                app:layout_constraintBottom_toTopOf="@+id/nameOfBrandM"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.723" />
 
             <EditText
                 android:id="@+id/nameOfBrandM"
@@ -81,10 +59,10 @@
                 android:textSize="@dimen/_15ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.182" />
+                app:layout_constraintVertical_bias="0.107" />
 
             <EditText
                 android:id="@+id/suppliersAddressM"
