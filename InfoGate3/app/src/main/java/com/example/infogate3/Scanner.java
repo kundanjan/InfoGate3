@@ -151,10 +151,18 @@ public class Scanner extends AppCompatActivity {
                     String barcodeValue = barcode.displayValue;
                     runOnUiThread(() -> {
                         Toast.makeText(Scanner.this, "Scanned: " + barcodeValue, Toast.LENGTH_LONG).show();
+
                         // Do something with the scanned value
 
                     });
+                    Intent intent = new Intent(Scanner.this,afterScan.class);
+                    intent.putExtra("keydisplay", barcodeValue);
+
+                    startActivity(intent);
+
                 }
+
+
             }
         });
     }

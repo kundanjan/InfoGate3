@@ -41,6 +41,7 @@ public class ScannerRecords extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ScannerRecords.this, generateQR.class);
+
                 String nameDevice = nameofDevice.getText().toString();
                 String nameBrand = nameofBrand.getText().toString();
                 String suppaddress = supplierAddress.getText().toString();
@@ -56,16 +57,17 @@ public class ScannerRecords extends AppCompatActivity {
 
 
                 intent.putExtra("key1","Name of Device: "+nameDevice);
-                intent.putExtra("key2","\nName of Brand :"+nameBrand);
+                intent.putExtra("key2","\nName of Brand: "+nameBrand);
                 intent.putExtra("key3","\nsupplier Address: "+suppaddress);
                 intent.putExtra("key4","\nDate of Receipt: "+dateReceipt);
-                intent.putExtra("key5","\nCost of device"+costcomp);
-                intent.putExtra("key6","\nDSR page & SR no.: "+DSR_Sr);
+                intent.putExtra("key5","\nCost of device: "+costcomp);
+                intent.putExtra("key6","\nDSR page & SR no. : "+DSR_Sr);
                 intent.putExtra("key7","\nName of Department: "+nameDepart);
-                intent.putExtra("key8","\n Name of Lab"+nameLab);
+                intent.putExtra("key8","\n Name of Lab: "+nameLab);
 
                 startActivity(intent);
-            }}
+            }
+        }
         });
     }
 }
