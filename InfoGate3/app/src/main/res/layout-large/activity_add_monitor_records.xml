@@ -27,7 +27,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="@dimen/_290sdp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_16sdp"
+        android:layout_margin="@dimen/_17sdp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
