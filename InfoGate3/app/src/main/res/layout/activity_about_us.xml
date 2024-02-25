@@ -182,8 +182,6 @@ android:background="#343434">
             android:layout_marginTop="@dimen/_8ssp"
             android:layout_marginBottom="@dimen/_8ssp"
             android:textAlignment="center"/>
-
-
     </LinearLayout>
 </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
