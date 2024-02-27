@@ -1,11 +1,5 @@
 package com.example.infogate3;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,6 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.google.android.material.navigation.NavigationView;
 
 public class UserLogin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,11 +40,27 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
         signbtn = findViewById(R.id.usertextView3);
         loginbtn = findViewById(R.id.button8);
 
+
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserLogin.this,Scan.class);
-                startActivity(intent);
+                String rname = username.getText().toString().trim();
+                String rpwd = pwd.getText().toString().trim();
+                 Intent intent = new Intent();
+                String t1 = getIntent().getStringExtra("k1");
+                String t2 = getIntent().getStringExtra("k2");
+
+                if (t1.equals(rname) && t2.equals(rpwd)) {
+                        Toast.makeText(UserLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                         intent = new Intent(UserLogin.this, Scan.class);
+                        startActivity(intent);
+                    }
+                else{
+                    Toast.makeText(UserLogin.this, "Enter Username and password properly ", Toast.LENGTH_SHORT).show();
+
+                }
+
+
             }
         });
 

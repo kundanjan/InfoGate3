@@ -1,11 +1,12 @@
 package com.example.infogate3;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         // Delay for splash screen duration and navigate to the main activity
         splashText.postDelayed(() -> {
             // Add your code to navigate to the main activity
-            startActivity(new Intent(MainActivity.this, UserLogin.class));
+            startActivity(new Intent(MainActivity.this, Scan.class));
             finish();
         }, SPLASH_DURATION);
 //        end

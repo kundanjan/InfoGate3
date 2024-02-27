@@ -1,20 +1,23 @@
 package com.example.infogate3;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.widget.Toast;
-import androidx.core.app.ActivityCompat;
-import android.Manifest;
+
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+
 import java.io.IOException;
 
 //public class Scanner extends AppCompatActivity {
@@ -149,16 +152,25 @@ public class Scanner extends AppCompatActivity {
                 if (barcodes.size() != 0) {
                     Barcode barcode = barcodes.valueAt(0);
                     String barcodeValue = barcode.displayValue;
+
                     runOnUiThread(() -> {
+
+
                         Toast.makeText(Scanner.this, "Scanned: " + barcodeValue, Toast.LENGTH_LONG).show();
 
                         // Do something with the scanned value
 
-                    });
+                    }
+                    );
                     Intent intent = new Intent(Scanner.this,afterScan.class);
                     intent.putExtra("keydisplay", barcodeValue);
-
                     startActivity(intent);
+
+
+                    //Intent intent = new Intent(Scanner.this,afterScan.class);
+                    //intent.putExtra("keydisplay", barcodeValue);
+
+
 
                 }
 
