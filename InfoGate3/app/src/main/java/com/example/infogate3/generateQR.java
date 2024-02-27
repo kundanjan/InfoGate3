@@ -58,6 +58,7 @@ public class generateQR extends AppCompatActivity {
 
                     PdfDocument pdfDocument = new PdfDocument();
                     PdfDocument.PageInfo pi = new PdfDocument.PageInfo.Builder(bitmap.getWidth(), bitmap.getHeight(), 1).create();
+                    //jguyhfuyf
                     PdfDocument.Page page = pdfDocument.startPage(pi);
 
 
