@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.android.material.navigation.NavigationView;
 
 public class UserLogin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,16 +34,30 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_login);
 
-        username = findViewById(R.id.editTextText);
-        pwd = findViewById(R.id.editTextPassword);
+        username = (EditText) findViewById(R.id.editTextText);
+        pwd =(EditText) findViewById(R.id.editTextPassword);
         signbtn = findViewById(R.id.usertextView3);
         loginbtn = findViewById(R.id.button8);
+
+        Intent intent=new Intent();
+        String resultU=getIntent().getStringExtra("k1");
+        String resultP=getIntent().getStringExtra("k2");
+
+
+
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserLogin.this,Scan.class);
-                startActivity(intent);
+                String usernamee = username.getText().toString().trim();
+                String password1 = pwd.getText().toString().trim();
+
+               if(resultU.equals(usernamee) && resultP.equals(password1)) {
+           Intent intent = new Intent(UserLogin.this, Scan.class);
+           startActivity(intent);
+       }else {
+                   Toast.makeText(UserLogin.this, "enter properly"+usernamee, Toast.LENGTH_SHORT).show();
+               }
             }
         });
 
