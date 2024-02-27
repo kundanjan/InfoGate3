@@ -88,8 +88,9 @@
                         android:fontFamily="@font/open_sans"
                         android:padding="@dimen/_35ssp"
                         android:text="VIEW MONITORS"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
 
                 </RelativeLayout>
@@ -124,8 +125,9 @@
                         android:fontFamily="@font/open_sans"
                         android:padding="@dimen/_35ssp"
                         android:text="VIEW CPUs"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
 
                 </RelativeLayout>
@@ -157,9 +159,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/open_sans"
                         android:padding="@dimen/_35ssp"
+                        android:textStyle="bold"
                         android:text="VIEW KEYBOARDS"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
 
                 </RelativeLayout>
@@ -192,9 +195,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/open_sans"
                         android:padding="@dimen/_35ssp"
+                        android:textStyle="bold"
                         android:text="VIEW MOUSE"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
 
                 </RelativeLayout>
@@ -227,9 +231,10 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/open_sans"
                         android:padding="@dimen/_35ssp"
+                        android:textStyle="bold"
                         android:text="VIEW PRINTERS"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp"/>
+                        android:textSize="@dimen/_11ssp"/>
 
 
                 </RelativeLayout>
@@ -264,8 +269,9 @@
                         android:fontFamily="@font/open_sans"
                         android:padding="@dimen/_35ssp"
                         android:text="VIEW SCANNERS"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/_13ssp" />
+                        android:textSize="@dimen/_11ssp" />
 
 
                 </RelativeLayout>
