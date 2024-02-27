@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity {
     public static final String TAG="TAG";
-   public EditText fullname,email,pwd,cpwd;
+    EditText fullname,email,pwd,cpwd;
     Button regbtn;
     TextView loginbtn;
 
@@ -73,10 +73,7 @@ public class SignUp extends AppCompatActivity {
 
                 if(password.equals(cpassword)){
                     Toast.makeText(SignUp.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
-
                     Intent intent = new Intent(SignUp.this,UserLogin.class);
-                    intent.putExtra("k1", name);
-                    intent.putExtra("k2", password);
                     startActivity(intent);
                 }
                 else {

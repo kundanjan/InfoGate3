@@ -34,7 +34,6 @@ android {
 dependencies {
 
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.itextpdf:itextg:5.5.10")
     implementation("com.google.android.material:material:1.8.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
@@ -45,13 +44,12 @@ dependencies {
     implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.2")
     implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.itextpdf:itextg:5.5.10")
+
     implementation ("com.airbnb.android:lottie:6.1.0")
 
 //    Responsive Size
     implementation("com.intuit.sdp:sdp-android:1.1.0")
 
-
-    implementation("com.google.zxing:core:3.4.1")
-    implementation("com.itextpdf:itext7-core:7.2.1")
 
 }
