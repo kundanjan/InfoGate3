@@ -1,11 +1,5 @@
 package com.example.infogate3;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,6 +7,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.google.android.material.navigation.NavigationView;
 
 public class UserLogin extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -37,11 +40,29 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
         signbtn = findViewById(R.id.usertextView3);
         loginbtn = findViewById(R.id.button8);
 
+       // Intent intent=new Intent();
+        String usern=getIntent().getStringExtra("t1");
+        String passw=getIntent().getStringExtra("t2");
+
+
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserLogin.this,Scan.class);
-                startActivity(intent);
+//                String resultuname = username.getText().toString().trim();
+//                String resultpwd = pwd.getText().toString().trim();
+//                if(resultuname.equals(usern) && resultpwd.equals(passw))
+//                {
+//                    Intent intent = new Intent(UserLogin.this,Scan.class);
+//                    startActivity(intent);
+//
+//                }else {
+                    Toast.makeText(UserLogin.this,"Enter username or Password Correctly",Toast.LENGTH_LONG).show();
+//                }
+
+
+
+
+
             }
         });
 

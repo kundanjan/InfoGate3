@@ -13,9 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity {
     public static final String TAG="TAG";
-    EditText fullname,email,pwd,cpwd;
+    public EditText fullname,email,pwd,cpwd;
     Button regbtn;
     TextView loginbtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,6 @@ public class SignUp extends AppCompatActivity {
 
         fullname = findViewById(R.id.signeditTextText1);
         email = findViewById(R.id.signeditTextText2);
-        pwd = findViewById(R.id.signeditTextPassword1);
         cpwd = findViewById(R.id.signeditTextPassword2);
         regbtn = findViewById(R.id.signbutton8);
         loginbtn = findViewById(R.id.textView2);
@@ -74,9 +74,14 @@ public class SignUp extends AppCompatActivity {
                 if(password.equals(cpassword)){
                     Toast.makeText(SignUp.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(SignUp.this,UserLogin.class);
+
+                   // intent.putExtra("t1",name);
+                    //intent.putExtra("t2",password);
+
                     startActivity(intent);
                 }
                 else {
+
                     Toast.makeText(SignUp.this, "Incorrect Password!", Toast.LENGTH_SHORT).show();
                 }
             }
