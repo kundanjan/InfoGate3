@@ -1,30 +1,24 @@
 package com.example.infogate3;
+
 import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
-import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-import com.journeyapps.barcodescanner.BarcodeEncoder;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MonitorRecords extends AppCompatActivity {
 
-    EditText nameofBrandM;
-    EditText supplierAddressM;
-    EditText dateofRecieptM;
-    EditText costofCompM;
-    EditText DSRM;
-    EditText nameofDepartM;
-    EditText nameofLabM;
+    EditText nameofBrand;
+    EditText supplierAddress;
+    EditText dateofReciept;
+    EditText costofComp;
+    EditText DSR,SR;
+    EditText nameofDepart;
+    EditText nameofLab;
     Button btn;
 
     @SuppressLint("MissingInflatedId")
@@ -32,13 +26,16 @@ public class MonitorRecords extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_monitor_records);
-        nameofBrandM =(EditText) findViewById(R.id.nameOfBrandM);
-        supplierAddressM =(EditText) findViewById(R.id.suppliersAddressM);
-        dateofRecieptM =(EditText) findViewById(R.id.dateOfReceiptOfComputersM);
-        costofCompM =(EditText) findViewById(R.id.costOfComputersM);
-        DSRM =(EditText) findViewById(R.id.DSRPageNoandSRNoM);
-        nameofDepartM =(EditText) findViewById(R.id.nameOfDepartmentM);
-        nameofLabM =(EditText) findViewById(R.id.nameOfLabM);
+        nameofBrand =(EditText) findViewById(R.id.nameOfBrand);
+        supplierAddress =(EditText) findViewById(R.id.suppliersAddress);
+        dateofReciept =(EditText) findViewById(R.id.dateOfReceiptOfComputers);
+        costofComp =(EditText) findViewById(R.id.costOfComputers);
+        DSR =(EditText) findViewById(R.id.DSRPageNo);
+        SR=(EditText) findViewById(R.id.SRNo);
+        nameofDepart =(EditText) findViewById(R.id.nameOfDepartment);
+        nameofLab =(EditText) findViewById(R.id.nameOfLab);
+
+
         btn = (Button) findViewById(R.id.monitor_btn);
 
 
@@ -46,27 +43,30 @@ public class MonitorRecords extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String nameBrand = nameofBrandM.getText().toString();
-                String suppaddress = supplierAddressM.getText().toString();
-                String dateReceipt = dateofRecieptM.getText().toString();
-                String costcomp = costofCompM.getText().toString();
-                String DSR_Sr = DSRM.getText().toString();
-                String nameDepart = nameofDepartM.getText().toString();
-                String nameLab = nameofLabM.getText().toString();
-
                 Intent intent = new Intent(MonitorRecords.this, generateQR.class);
-                if (nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
+
+                String nameBrand = nameofBrand.getText().toString();
+                String suppaddress = supplierAddress.getText().toString();
+                String dateReceipt = dateofReciept.getText().toString();
+                String costcomp = costofComp.getText().toString();
+                String DSR_no = DSR.getText().toString();
+                String SR_no=SR.getText().toString();
+                String nameDepart = nameofDepart.getText().toString();
+                String nameLab = nameofLab.getText().toString();
+
+                if (nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_no.isEmpty()||SR_no.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
                     Toast.makeText(MonitorRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
-                }
-                else
+                }else
                 {
-                    intent.putExtra("key2","Name of Brand : "+nameBrand);
-                    intent.putExtra("key3","\n\nsupplier Address : "+suppaddress);
-                    intent.putExtra("key4","\n\nDate of Receipt : "+dateReceipt);
-                    intent.putExtra("key5","\n\nCost of device : "+costcomp);
-                    intent.putExtra("key6","\n\nDSR page & SR no.: "+DSR_Sr);
+                    intent.putExtra("key1","Name of Brand : "+nameBrand);
+                    intent.putExtra("key2","\n\nsupplier Address : "+suppaddress);
+                    intent.putExtra("key3","\n\nDate of Receipt : "+dateReceipt);
+                    intent.putExtra("key4","\n\nCost of device : "+costcomp);
+                    intent.putExtra("key5","\n\nDSR page no.: "+DSR_no);
+                    intent.putExtra("key6","\n\nSR no.: "+SR_no);
                     intent.putExtra("key7","\n\nName of Department : "+nameDepart);
                     intent.putExtra("key8","\n\nName of Lab : "+nameLab);
+
                     startActivity(intent);
                 }
             }

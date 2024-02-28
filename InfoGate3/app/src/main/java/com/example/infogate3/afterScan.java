@@ -1,28 +1,25 @@
 package com.example.infogate3;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class afterScan extends AppCompatActivity {
-
-    TextView scannedValueTextView;
-
+TextView tv;
+String t111;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_scan);
+        tv=(TextView)findViewById(R.id.scannedValueTextView);
+        Intent intent=new Intent();
+        t111=getIntent().getStringExtra("keydisplay");
+        tv.setText(t111);
 
-        // Find the TextView in the layout
-        scannedValueTextView = findViewById(R.id.scannedValueTextView);
 
-        // Retrieve the scanned value from the Intent
-        String scannedValue = getIntent().getStringExtra("keydisplay");
-
-        // Set the scanned value to the TextView
-        if (scannedValue != null) {
-            scannedValueTextView.setText(scannedValue);
-        }
     }
 }

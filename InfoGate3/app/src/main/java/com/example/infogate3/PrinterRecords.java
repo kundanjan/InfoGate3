@@ -1,5 +1,6 @@
 package com.example.infogate3;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,52 +10,56 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PrinterRecords extends AppCompatActivity {
-    EditText nameBrandP;
-    EditText supplierAddressP;
-    EditText dateofRecieptP;
-    EditText costofCompP;
-    EditText DSRP;
-    EditText nameofDepartP;
-    EditText nameofLabP;
+    EditText nameofBrand;
+    EditText supplierAddress;
+    EditText dateofReciept;
+    EditText costofComp;
+    EditText DSR,SR;
+    EditText nameofDepart;
+    EditText nameofLab;
     Button btn;
 
+    @SuppressLint("MissingInflatedId")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_printer_records);
-            nameBrandP =(EditText) findViewById(R.id.nameOfBrandP);
-            supplierAddressP =(EditText) findViewById(R.id.suppliersAddressP);
-            dateofRecieptP =(EditText) findViewById(R.id.dateOfReceiptOfComputersP);
-            costofCompP =(EditText) findViewById(R.id.costOfComputersP);
-            DSRP =(EditText) findViewById(R.id.DSRPageNoandSRNoP);
-            nameofDepartP =(EditText) findViewById(R.id.nameOfDepartmentP);
-            nameofLabP =(EditText) findViewById(R.id.nameOfLabP);
-            btn = (Button) findViewById(R.id.printer_btn);
+        nameofBrand =(EditText) findViewById(R.id.nameOfBrand);
+        supplierAddress =(EditText) findViewById(R.id.suppliersAddress);
+        dateofReciept =(EditText) findViewById(R.id.dateOfReceiptOfComputers);
+        costofComp =(EditText) findViewById(R.id.costOfComputers);
+        DSR =(EditText) findViewById(R.id.DSRPageNo);
+        SR=(EditText) findViewById(R.id.SRNo);
+        nameofDepart =(EditText) findViewById(R.id.nameOfDepartment);
+        nameofLab =(EditText) findViewById(R.id.nameOfLab);
+        btn = (Button) findViewById(R.id.printer_btn);
 
             // Generate QR code
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(PrinterRecords.this, generateQR.class);
-                    String nameBrand = nameBrandP.getText().toString();
-                    String suppaddress = supplierAddressP.getText().toString();
-                    String dateReceipt = dateofRecieptP.getText().toString();
-                    String costcomp = costofCompP.getText().toString();
-                    String DSR_Sr = DSRP.getText().toString();
-                    String nameDepart = nameofDepartP.getText().toString();
-                    String nameLab = nameofLabP.getText().toString();
+                    String nameBrand = nameofBrand.getText().toString();
+                    String suppaddress = supplierAddress.getText().toString();
+                    String dateReceipt = dateofReciept.getText().toString();
+                    String costcomp = costofComp.getText().toString();
+                    String DSR_no = DSR.getText().toString();
+                    String SR_no=SR.getText().toString();
+                    String nameDepart = nameofDepart.getText().toString();
+                    String nameLab = nameofLab.getText().toString();
 
-                    if (nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
-                        Toast.makeText(PrinterRecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
-                    }
-                    else
+                    if (nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_no.isEmpty()||SR_no.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
+                        Toast.makeText(PrinterRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
+                    }else
                     {
-                        intent.putExtra("key2","Name of Brand : "+nameBrand);
-                        intent.putExtra("key3","\n\nsupplier Address : "+suppaddress);
-                        intent.putExtra("key4","\n\nDate of Receipt : "+dateReceipt);
-                        intent.putExtra("key5","\n\nCost of device : "+costcomp);
-                        intent.putExtra("key6","\n\nDSR page & SR no.: "+DSR_Sr);
+                        intent.putExtra("key1","Name of Brand : "+nameBrand);
+                        intent.putExtra("key2","\n\nsupplier Address : "+suppaddress);
+                        intent.putExtra("key3","\n\nDate of Receipt : "+dateReceipt);
+                        intent.putExtra("key4","\n\nCost of device : "+costcomp);
+                        intent.putExtra("key5","\n\nDSR page no.: "+DSR_no);
+                        intent.putExtra("key6","\n\nSR no.: "+SR_no);
                         intent.putExtra("key7","\n\nName of Department : "+nameDepart);
                         intent.putExtra("key8","\n\nName of Lab : "+nameLab);
+
                         startActivity(intent);
                     }
                 }

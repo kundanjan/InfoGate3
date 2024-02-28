@@ -1,27 +1,21 @@
 package com.example.infogate3;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.WriterException;
-import com.google.zxing.common.BitMatrix;
-import com.journeyapps.barcodescanner.BarcodeEncoder;
 public class CPURecords extends AppCompatActivity {
 
     EditText nameofBrand;
     EditText supplierAddress;
     EditText dateofReciept;
     EditText costofComp;
-    EditText DSR;
+    EditText DSR,SR;
     EditText nameofDepart;
     EditText nameofLab;
     Button btn;
@@ -34,7 +28,8 @@ public class CPURecords extends AppCompatActivity {
         supplierAddress =(EditText) findViewById(R.id.suppliersAddress);
         dateofReciept =(EditText) findViewById(R.id.dateOfReceiptOfComputers);
         costofComp =(EditText) findViewById(R.id.costOfComputers);
-        DSR =(EditText) findViewById(R.id.DSRPageNoandSRNo);
+        DSR =(EditText) findViewById(R.id.DSRPageNo);
+        SR=(EditText) findViewById(R.id.SRNo);
         nameofDepart =(EditText) findViewById(R.id.nameOfDepartment);
         nameofLab =(EditText) findViewById(R.id.nameOfLab);
         btn = (Button) findViewById(R.id.cpubtn);
@@ -49,18 +44,21 @@ public class CPURecords extends AppCompatActivity {
                 String suppaddress = supplierAddress.getText().toString();
                 String dateReceipt = dateofReciept.getText().toString();
                 String costcomp = costofComp.getText().toString();
-                String DSR_Sr = DSR.getText().toString();
+                String DSR_no = DSR.getText().toString();
+                String SR_no=SR.getText().toString();
                 String nameDepart = nameofDepart.getText().toString();
                 String nameLab = nameofLab.getText().toString();
-                if (nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_Sr.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
-                    Toast.makeText(CPURecords.this, "Please Enter all field properly", Toast.LENGTH_LONG).show();
+
+                if (nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_no.isEmpty()||SR_no.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
+                    Toast.makeText(CPURecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
                 }else
                 {
-                    intent.putExtra("key2","Name of Brand : "+nameBrand);
-                    intent.putExtra("key3","\n\nsupplier Address : "+suppaddress);
-                    intent.putExtra("key4","\n\nDate of Receipt : "+dateReceipt);
-                    intent.putExtra("key5","\n\nCost of device : "+costcomp);
-                    intent.putExtra("key6","\n\nDSR page & SR no.: "+DSR_Sr);
+                    intent.putExtra("key1","Name of Brand : "+nameBrand);
+                    intent.putExtra("key2","\n\nsupplier Address : "+suppaddress);
+                    intent.putExtra("key3","\n\nDate of Receipt : "+dateReceipt);
+                    intent.putExtra("key4","\n\nCost of device : "+costcomp);
+                    intent.putExtra("key5","\n\nDSR page no.: "+DSR_no);
+                    intent.putExtra("key6","\n\nSR no.: "+SR_no);
                     intent.putExtra("key7","\n\nName of Department : "+nameDepart);
                     intent.putExtra("key8","\n\nName of Lab : "+nameLab);
                     startActivity(intent);
