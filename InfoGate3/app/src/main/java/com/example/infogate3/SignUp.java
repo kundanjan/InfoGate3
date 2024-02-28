@@ -72,8 +72,13 @@ public class SignUp extends AppCompatActivity {
                 }
 
                 if(password.equals(cpassword)){
+                   // Intent intent =new Intent();
+
                     Toast.makeText(SignUp.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SignUp.this,UserLogin.class);
+                     Intent intent = new Intent(SignUp.this,UserLogin.class);
+                    intent.putExtra("k1",name);
+                    intent.putExtra("k2",password);
+
                     startActivity(intent);
                 }
                 else {
