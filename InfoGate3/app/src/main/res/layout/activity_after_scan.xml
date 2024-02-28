@@ -33,7 +33,7 @@
         android:fontFamily="@font/open_sans"
         android:padding="@dimen/_12ssp"
         android:textColor="@android:color/white"
-        android:textSize="@dimen/_15ssp"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.238"

@@ -55,7 +55,7 @@ public class ScannerRecords extends AppCompatActivity {
                 }else
                 {
                     intent.putExtra("key1","Name of Brand : "+nameBrand);
-                    intent.putExtra("key2","\n\nsupplier Address : "+suppaddress);
+                    intent.putExtra("key2","\n\nSupplier Address : "+suppaddress);
                     intent.putExtra("key3","\n\nDate of Receipt : "+dateReceipt);
                     intent.putExtra("key4","\n\nCost of device : "+costcomp);
                     intent.putExtra("key5","\n\nDSR page no.: "+DSR_no);

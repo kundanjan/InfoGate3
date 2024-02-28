@@ -76,12 +76,15 @@ public class Scanner extends AppCompatActivity {
             }
 
             @Override
-            public void receiveDetections(Detector.Detections<Barcode> detections) {
+            public void receiveDetections(Detector.Detections<Barcode> detections)
+            {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-                if (barcodes.size() != 0 && !isActivityStarted) {
+                if (barcodes.size() != 0 && !isActivityStarted)
+                {
                     Barcode barcode = barcodes.valueAt(0);
                     String barcodeValue = barcode.displayValue;
-                    runOnUiThread(() -> {
+                    runOnUiThread(() ->
+                    {
                         // Do something with the scanned value
                         Intent intent = new Intent(Scanner.this, afterScan.class);
                         intent.putExtra("keydisplay", barcodeValue);
