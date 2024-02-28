@@ -58,8 +58,8 @@
     <string name="nameOfBrand">Name of Brand</string>
     <string name="suppliersFullAddress">Suppliers Full Address</string>
     <string name="dateofReceipt">Date of Receipt(eg.12/12/24)</string>
-    <string name="dsrPage">DSR Page No.</string>
-    <string name="SrNo">SR NO.</string>
+    <string name="dsrPage">DSR Page No. and SR No.</string>
+    <string name="SrNo">Serial No.</string>
     <string name="cost">Cost of Computer</string>
     <string name="nameofDepartment">Name of Department</string>
     <string name="nameofLab">Name of Laboratory</string>
