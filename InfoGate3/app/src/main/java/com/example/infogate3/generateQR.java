@@ -18,7 +18,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.zxing.BarcodeFormat;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 
-public class generateQR extends AppCompatActivity {
+public class generateQR extends AppCompatActivity
+{
     public ImageView img;
 
     // final static int REQUEST_CODE = 1232;
@@ -26,7 +27,8 @@ public class generateQR extends AppCompatActivity {
     Button btn;
     public Bitmap bitmap;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generate_qr);
 
@@ -44,17 +46,22 @@ public class generateQR extends AppCompatActivity {
         String t8 = getIntent().getStringExtra("key8");
         String data = t1 + ',' + t2 + ',' + t3 + ',' + t4 + ',' + t5 + ',' + t6 + ',' + t7 + ',' + t8;
 
-        try {
+        try
+        {
             BarcodeEncoder barcodeEncoder = new BarcodeEncoder();
             bitmap = barcodeEncoder.encodeBitmap(data, BarcodeFormat.QR_CODE, 400, 400);
             img.setImageBitmap(bitmap);
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         //    askPermissions();
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
 
                 // Create PDF document as before
                 pdfDocument = new PdfDocument();
@@ -81,18 +88,24 @@ public class generateQR extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 1 && resultCode == RESULT_OK) {
-            if (data != null) {
+        if (requestCode == 1 && resultCode == RESULT_OK)
+        {
+            if (data != null)
+            {
                 Uri uri = data.getData();
-                try {
+                try
+                {
                     // Write PDF content to the selected file using the URI
                     pdfDocument.writeTo(getContentResolver().openOutputStream(uri));
                     Toast.makeText(generateQR.this, "PDF File saved successfully", Toast.LENGTH_SHORT).show();
                     pdfDocument.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e)
+                {
                     e.printStackTrace();
                     Toast.makeText(generateQR.this, "Error saving PDF", Toast.LENGTH_SHORT).show();
                 }

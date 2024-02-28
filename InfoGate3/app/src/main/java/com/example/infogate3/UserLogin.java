@@ -41,21 +41,24 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
         loginbtn = findViewById(R.id.button8);
 
 
-        loginbtn.setOnClickListener(new View.OnClickListener() {
+        loginbtn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 String rname = username.getText().toString().trim();
                 String rpwd = pwd.getText().toString().trim();
-                 Intent intent = new Intent();
                 String t1 = getIntent().getStringExtra("k1");
                 String t2 = getIntent().getStringExtra("k2");
 
-                if (t1.equals(rname) && t2.equals(rpwd)) {
+                if (t1.equals(rname) && t2.equals(rpwd))
+                {
                         Toast.makeText(UserLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                         intent = new Intent(UserLogin.this, Scan.class);
+                       Intent intent = new Intent(UserLogin.this, Scan.class);
                         startActivity(intent);
-                    }
-                else{
+                }
+                else
+                {
                     Toast.makeText(UserLogin.this, "Enter Username and password properly ", Toast.LENGTH_SHORT).show();
 
                 }
@@ -64,9 +67,11 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
             }
         });
 
-        signbtn.setOnClickListener(new View.OnClickListener() {
+        signbtn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
 //                startActivity(new Intent(getApplicationContext(),SignUp.class));
                 Intent intent = new Intent(UserLogin.this,SignUp.class);
                 startActivity(intent);
@@ -97,10 +102,14 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
     }
 
     @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+    public void onBackPressed()
+    {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START))
+        {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else {
+        }
+        else
+        {
             super.onBackPressed();
         }
 
@@ -109,14 +118,17 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
 
     @Override
 //selection on menu items
-    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+    {
         int id = menuItem.getItemId();
-        if(id == R.id.nav_adminLogin){
+        if(id == R.id.nav_adminLogin)
+        {
             Intent intent = new Intent(UserLogin.this,AdminLogin.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
-        else if(id == R.id.nav_aboutus) {
+        else if(id == R.id.nav_aboutus)
+        {
             Intent intent = new Intent(UserLogin.this,AboutUs.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);

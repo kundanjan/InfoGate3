@@ -10,7 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MouseRecords extends AppCompatActivity {
+public class MouseRecords extends AppCompatActivity
+{
     EditText nameofBrand;
     EditText supplierAddress;
     EditText dateofReciept;
@@ -21,7 +22,8 @@ public class MouseRecords extends AppCompatActivity {
     Button btn;
 
     @SuppressLint("MissingInflatedId")
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_mouse_records);
         nameofBrand =(EditText) findViewById(R.id.nameOfBrand);
@@ -36,7 +38,8 @@ public class MouseRecords extends AppCompatActivity {
 
 
         // Generate QR code
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MouseRecords.this, generateQR.class);
@@ -49,20 +52,21 @@ public class MouseRecords extends AppCompatActivity {
                 String nameDepart = nameofDepart.getText().toString();
                 String nameLab = nameofLab.getText().toString();
 
-                if (nameBrand.isEmpty()||suppaddress.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_no.isEmpty()||SR_no.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty()) {
+                if (nameBrand.isEmpty()||dateReceipt.isEmpty()||costcomp.isEmpty()||DSR_no.isEmpty()||nameDepart.isEmpty()||nameLab.isEmpty())
+                {
                     Toast.makeText(MouseRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
-                }else
+                }
+                else
                 {
                     intent.putExtra("key1","Name of Brand : "+nameBrand);
                     intent.putExtra("key2","\n\nSupplier Address : "+suppaddress);
                     intent.putExtra("key3","\n\nDate of Receipt : "+dateReceipt);
                     intent.putExtra("key4","\n\nCost of device : "+costcomp);
-                    intent.putExtra("key5","\n\nDSR page no.: "+DSR_no);
-                    intent.putExtra("key6","\n\nSR no.: "+SR_no);
+                    intent.putExtra("key5","\n\nDSR page no. and SR no.: "+DSR_no);
+                    intent.putExtra("key6","\n\nSerial no.: "+SR_no);
                     intent.putExtra("key7","\n\nName of Department : "+nameDepart);
                     intent.putExtra("key8","\n\nName of Lab : "+nameLab);
-
-                startActivity(intent);
+                    startActivity(intent);
             }}
         });
     }
