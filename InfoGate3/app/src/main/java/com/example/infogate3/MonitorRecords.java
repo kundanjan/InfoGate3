@@ -57,15 +57,16 @@ public class MonitorRecords extends AppCompatActivity {
                 Intent intent = new Intent(MonitorRecords.this, generateQR.class);
                 if (nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
                     Toast.makeText(MonitorRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
-                } else {
-
-                    intent.putExtra("key2","\nName of Brand: "+nameBrand);
-                    intent.putExtra("key3","\nsupplier Address: "+suppaddress);
-                    intent.putExtra("key4","\nDate of Receipt: "+dateReceipt);
-                    intent.putExtra("key5","\nCost of device: "+costcomp);
-                    intent.putExtra("key6","\nDSR page & SR no. : "+DSR_Sr);
-                    intent.putExtra("key7","\nName of Department: "+nameDepart);
-                    intent.putExtra("key8","\n Name of Lab: "+nameLab);
+                }
+                else
+                {
+                    intent.putExtra("key2","Name of Brand : "+nameBrand);
+                    intent.putExtra("key3","\n\nsupplier Address : "+suppaddress);
+                    intent.putExtra("key4","\n\nDate of Receipt : "+dateReceipt);
+                    intent.putExtra("key5","\n\nCost of device : "+costcomp);
+                    intent.putExtra("key6","\n\nDSR page & SR no.: "+DSR_Sr);
+                    intent.putExtra("key7","\n\nName of Department : "+nameDepart);
+                    intent.putExtra("key8","\n\nName of Lab : "+nameLab);
                     startActivity(intent);
                 }
             }

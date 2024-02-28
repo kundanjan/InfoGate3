@@ -3,21 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#343434"
     android:layout_height="match_parent"
     tools:context=".afterScan">
 
 
-    <TextView
-        android:id="@+id/display"
-        android:layout_width="394dp"
-
-        android:layout_height="603dp"
-        android:text="Hello"
-        android:textAlignment="center"
-        android:textSize="24dp"
+    <ImageView
+        android:id="@+id/topBackgroundImage"
+        android:layout_width="410dp"
+        android:layout_height="224dp"
+        android:layout_marginEnd="1dp"
+        android:contentDescription="@string/content4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top_background"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="8dp" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/scannedValueTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_8ssp"
+        android:layout_marginRight="@dimen/_8ssp"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:fontFamily="@font/open_sans"
+        android:padding="@dimen/_12ssp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

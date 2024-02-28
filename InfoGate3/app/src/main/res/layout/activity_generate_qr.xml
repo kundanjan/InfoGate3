@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="#343434"
     tools:context=".generateQR">
 
 
@@ -18,18 +19,20 @@
 
     <Button
         android:id="@+id/print"
-        android:layout_width="wrap_content"
-        android:layout_height="73dp"
+        android:layout_width="201dp"
+        android:layout_height="124dp"
         android:layout_below="@+id/qr_code"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="106dp"
         android:layout_marginTop="97dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="52dp"
-        android:text="print"
-        android:textSize="20dp" />
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="160dp"
+        android:text="Print"
+        android:fontFamily="@font/open_sans"
+        android:textSize="20sp"
+        app:rippleColor="#FFEA00" />
 
 
 </RelativeLayout>

@@ -17,77 +17,7 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 import java.io.IOException;
 
-//public class Scanner extends AppCompatActivity {
-//
-//    SurfaceView surfaceView;
-//    CameraSource cameraSource;
-//    BarcodeDetector barcodeDetector;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_scanner);
-//
-//        surfaceView = findViewById(R.id.surfaceview);
-//        barcodeDetector = new BarcodeDetector.Builder(this)
-//                .setBarcodeFormats(Barcode.ALL_FORMATS)
-//                .build();
-//
-//        cameraSource = new CameraSource.Builder(this, barcodeDetector)
-//                .setRequestedPreviewSize(1024, 768)
-//                .setAutoFocusEnabled(true)
-//                .build();
-//
-//        surfaceView.getHolder().addCallback(new SurfaceHolder.Callback() {
-//            @Override
-//            public void surfaceCreated(SurfaceHolder holder) {
-//                try {
-//                    if (ActivityCompat.checkSelfPermission(Scanner.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-//                        // TODO: Consider calling
-//                        //    ActivityCompat#requestPermissions
-//                        // here to request the missing permissions, and then overriding
-//                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-//                        //                                          int[] grantResults)
-//                        // to handle the case where the user grants the permission. See the documentation
-//                        // for ActivityCompat#requestPermissions for more details.
-//                        return;
-//                    }
-//                    cameraSource.start(surfaceView.getHolder());
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//
-//            @Override
-//            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-//            }
-//
-//            @Override
-//            public void surfaceDestroyed(SurfaceHolder holder) {
-//                cameraSource.stop();
-//            }
-//        });
-//
-//        barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
-//            @Override
-//            public void release() {
-//            }
-//
-//            @Override
-//            public void receiveDetections(Detector.Detections<Barcode> detections) {
-//                final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-//                if (barcodes.size() != 0) {
-//                    Barcode barcode = barcodes.valueAt(0);
-//                    String barcodeValue = barcode.displayValue;
-//                    runOnUiThread(() -> {
-//                        Toast.makeText(Scanner.this, "Scanned: " + barcodeValue, Toast.LENGTH_SHORT).show();
-//                        // Do something with the scanned value
-//                    });
-//                }
-//            }
-//        });
-//    }
-//}
+
 
 public class Scanner extends AppCompatActivity {
 
@@ -95,6 +25,8 @@ public class Scanner extends AppCompatActivity {
     SurfaceView surfaceView;
     CameraSource cameraSource;
     BarcodeDetector barcodeDetector;
+    private boolean isActivityStarted = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,24 +78,21 @@ public class Scanner extends AppCompatActivity {
             @Override
             public void receiveDetections(Detector.Detections<Barcode> detections) {
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
-                if (barcodes.size() != 0) {
+                if (barcodes.size() != 0 && !isActivityStarted) {
                     Barcode barcode = barcodes.valueAt(0);
                     String barcodeValue = barcode.displayValue;
                     runOnUiThread(() -> {
-                        Toast.makeText(Scanner.this, "Scanned: " + barcodeValue, Toast.LENGTH_LONG).show();
-
                         // Do something with the scanned value
+                        Intent intent = new Intent(Scanner.this, afterScan.class);
+                        intent.putExtra("keydisplay", barcodeValue);
+                        startActivity(intent);
 
+                        isActivityStarted = true; // Set the flag to true to prevent continuous activity starting
                     });
-                    Intent intent = new Intent(Scanner.this,afterScan.class);
-                    intent.putExtra("keydisplay", barcodeValue);
-
-                    startActivity(intent);
 
                 }
-
-
             }
+
         });
     }
 
