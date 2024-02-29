@@ -61,19 +61,43 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.728">
 
+        <!-- margin 10-->
         <LinearLayout
-            android:id="@+id/containerLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:background="#343434"
-            tools:context=".ViewMonitors">
+            android:layout_margin="1dp"
+            android:orientation="vertical">
 
-            <!-- Cards will be added dynamically here -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <RelativeLayout
+                    android:id="@+id/viewMonitors"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_400sdp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:drawable/dialog_holo_dark_frame">
+
+                    <TextView
+                        android:id="@+id/monitor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:padding="@dimen/_35ssp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
 
         </LinearLayout>
-
 
 
     </ScrollView>

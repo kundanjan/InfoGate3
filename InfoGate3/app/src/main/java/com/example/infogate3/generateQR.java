@@ -22,10 +22,10 @@ public class generateQR extends AppCompatActivity
 {
     public ImageView img;
 
-    // final static int REQUEST_CODE = 1232;
-    PdfDocument pdfDocument;
+   // final static int REQUEST_CODE = 1232;
+   PdfDocument pdfDocument;
     Button btn;
-    public Bitmap bitmap;
+  public Bitmap bitmap;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -82,36 +82,38 @@ public class generateQR extends AppCompatActivity
                 intent.putExtra(Intent.EXTRA_TITLE, "myPDFFile.pdf");
                 startActivityForResult(intent, 1); // Replace with your request code
 
-                // Close the document before starting activity
+                 // Close the document before starting activity
             }
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
-    {
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+        {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 1 && resultCode == RESULT_OK)
-        {
-            if (data != null)
+            if (requestCode == 1 && resultCode == RESULT_OK)
             {
-                Uri uri = data.getData();
-                try
-                {
-                    // Write PDF content to the selected file using the URI
-                    pdfDocument.writeTo(getContentResolver().openOutputStream(uri));
-                    Toast.makeText(generateQR.this, "PDF File saved successfully", Toast.LENGTH_SHORT).show();
-                    pdfDocument.close();
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                    Toast.makeText(generateQR.this, "Error saving PDF", Toast.LENGTH_SHORT).show();
+            if (data != null)
+                {    Uri uri = data.getData();
+                    try
+                    {    // Write PDF content to the selected file using the URI
+                        pdfDocument.writeTo(getContentResolver().openOutputStream(uri));
+                        Toast.makeText(generateQR.this, "PDF File saved successfully", Toast.LENGTH_SHORT).show();
+                        pdfDocument.close();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(generateQR.this, "Error saving PDF", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         }
-    }
 
 
-}
+            }
+
+
+
+
+
+
