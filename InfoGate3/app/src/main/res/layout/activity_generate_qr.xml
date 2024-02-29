@@ -12,7 +12,7 @@
     <ImageView
         android:id="@+id/qr_code"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_350sdp"
+        android:layout_height="@dimen/_320sdp"
         android:layout_marginTop="@dimen/_90sdp"
         android:scaleType="fitCenter" />
 
