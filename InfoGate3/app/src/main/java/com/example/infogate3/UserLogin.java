@@ -45,21 +45,29 @@ public class UserLogin extends AppCompatActivity implements NavigationView.OnNav
         {
             @Override
             public void onClick(View view)
+
             {
+
                 String rname = username.getText().toString().trim();
                 String rpwd = pwd.getText().toString().trim();
                 String t1 = getIntent().getStringExtra("k1");
                 String t2 = getIntent().getStringExtra("k2");
 
-                if (t1.equals(rname) && t2.equals(rpwd))
+
+
+                if(rname.isEmpty()|| rpwd.isEmpty())
+                {
+                    Toast.makeText(UserLogin.this, "Enter Username and Password ", Toast.LENGTH_SHORT).show();
+                }
+                else if (t1.equals(rname) && t2.equals(rpwd))
                 {
                         Toast.makeText(UserLogin.this, "Login Successful!", Toast.LENGTH_SHORT).show();
-                       Intent intent = new Intent(UserLogin.this, Scan.class);
+                        Intent intent = new Intent(UserLogin.this, Scan.class);
                         startActivity(intent);
                 }
                 else
                 {
-                    Toast.makeText(UserLogin.this, "Enter Username and password properly ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UserLogin.this, "Enter Username and Password Properly ", Toast.LENGTH_SHORT).show();
 
                 }
 

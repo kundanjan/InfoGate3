@@ -76,7 +76,7 @@ public class MonitorRecords extends AppCompatActivity {
                 sendMonitorData(requestQueue,nameBrand,suppaddress,dateReceipt,Integer.parseInt(costcomp),DSR_Sr,nameDepart,nameLab,Srno);
 
                 Intent intent = new Intent(MonitorRecords.this, generateQR.class);
-                if (nameBrand.isEmpty() || suppaddress.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
+                if (nameBrand.isEmpty() || dateReceipt.isEmpty() || costcomp.isEmpty() || DSR_Sr.isEmpty() || nameDepart.isEmpty() || nameLab.isEmpty()) {
                     Toast.makeText(MonitorRecords.this, "Please  Enter all field properly", Toast.LENGTH_LONG).show();
                 } else {
 

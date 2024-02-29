@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
         splashText.postDelayed(() ->
         {
             // Add your code to navigate to the main activity
-            startActivity(new Intent(MainActivity.this, Scan.class));
+            startActivity(new Intent(MainActivity.this, UserLogin.class));
             finish();
         }, SPLASH_DURATION);
 //        end

@@ -31,6 +31,7 @@ public class ScannerRecords extends AppCompatActivity
     EditText costofComp;
     EditText DSR,SR;
     EditText nameofDepart;
+
     EditText nameofLab;
     Button btn;
 

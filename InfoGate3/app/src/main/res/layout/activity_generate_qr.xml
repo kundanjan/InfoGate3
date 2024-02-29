@@ -12,27 +12,26 @@
     <ImageView
         android:id="@+id/qr_code"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="90dp"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_marginTop="@dimen/_90sdp"
         android:scaleType="fitCenter" />
 
 
     <Button
         android:id="@+id/print"
-        android:layout_width="201dp"
-        android:layout_height="124dp"
+        android:layout_width="@dimen/_201sdp"
+        android:layout_height="@dimen/_124sdp"
         android:layout_below="@+id/qr_code"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="97dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginStart="@dimen/_60sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginBottom="@dimen/_110sdp"
         android:text="Print"
+        android:textColor="@color/white"
         android:fontFamily="@font/open_sans"
-        android:textSize="20sp"
+        android:textSize="@dimen/_20ssp"
         app:rippleColor="#FFEA00" />
-
-
 </RelativeLayout>
