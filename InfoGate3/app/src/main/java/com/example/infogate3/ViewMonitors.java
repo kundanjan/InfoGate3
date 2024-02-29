@@ -1,10 +1,14 @@
 package com.example.infogate3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,6 +69,15 @@ public class ViewMonitors extends AppCompatActivity {
         );
 
         queue.add(stringRequest);
+
+        LinearLayout ll = findViewById(R.id.LL);
+        for (int i = 0; i < 5; i++) {
+            // Inflate the layout programmatically
+            LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            RelativeLayout monitorView = (RelativeLayout) inflater.inflate(R.layout.monitor_card, null);
+
+            ll.addView(monitorView);
+        }
 
 
 

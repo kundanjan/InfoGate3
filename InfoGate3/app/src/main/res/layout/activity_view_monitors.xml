@@ -63,6 +63,7 @@
 
         <!-- margin 10-->
         <LinearLayout
+            android:id="@+id/LL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -70,6 +71,7 @@
 
 
             <RelativeLayout
+                android:id="@+id/monitorcard"
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
 
