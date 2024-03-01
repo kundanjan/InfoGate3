@@ -23,7 +23,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import okhttp3.OkHttpClient;
 
 public class MonitorRecords extends AppCompatActivity {
 
@@ -37,7 +36,6 @@ public class MonitorRecords extends AppCompatActivity {
     EditText nameofLabM;
     Button btn;
 
-    OkHttpClient client;
     static String url = "https://infogateapi.onrender.com/add_monitor";
 
     @SuppressLint("MissingInflatedId")
@@ -55,7 +53,6 @@ public class MonitorRecords extends AppCompatActivity {
         nameofLabM =(EditText) findViewById(R.id.nameOfLab);
         btn = (Button) findViewById(R.id.monitor_btn);
 
-        client = new OkHttpClient();
         // Generate QR code
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
