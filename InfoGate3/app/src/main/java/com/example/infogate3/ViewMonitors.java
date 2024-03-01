@@ -82,7 +82,7 @@ public class ViewMonitors extends AppCompatActivity {
                                                 try {
                                                     JSONObject jsonObject = new JSONObject(response1);
                                                     MonitorInfo monitorInfo = gson.fromJson(jsonObject.getJSONObject("monitor_info").toString(), MonitorInfo.class);
-                                                    String str = "ID : "+monitorInfo.id+"\nName of Brand:"+monitorInfo.name_of_brand+"Srno.:"+monitorInfo.Srno+"\nSuplier Address : "+monitorInfo.suppliers_full_address+"\nDate of Receipt:"+monitorInfo.date_of_receipt_of_computer+"\nCost : "+monitorInfo.cost_of_computer+"\nDsr no:"+monitorInfo.dsr_no+"\nName of Dept : "+monitorInfo.name_of_department+"\nName of Laboratory : "+monitorInfo.name_of_laboratory;
+                                                    String str = "ID : "+monitorInfo.id+"\nName of Brand : "+monitorInfo.name_of_brand+"\nSerial no : "+monitorInfo.Srno+"\nSuplier Address : "+monitorInfo.suppliers_full_address+"\nDate of Receipt : "+monitorInfo.date_of_receipt_of_computer+"\nCost : "+monitorInfo.cost_of_computer+"\nDsr no : "+monitorInfo.dsr_no+"\nName of Dept : "+monitorInfo.name_of_department+"\nName of Lab : "+monitorInfo.name_of_laboratory;
                                                     tv.setText(str);
                                                 }catch(Exception e){
                                                     System.out.println(e);
