@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,6 +14,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Scan extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Button scanBtn;
@@ -32,6 +32,16 @@ public class Scan extends AppCompatActivity implements NavigationView.OnNavigati
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Scan.this,Scanner.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(Scan.this, UserLogin.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

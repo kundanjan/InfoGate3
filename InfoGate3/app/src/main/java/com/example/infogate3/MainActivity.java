@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity
 //   animation
     private static final int SPLASH_DURATION = 4000; // 4 seconds
     private TextView splashText;
+
 //    end
 
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
 
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity
 
 
     }
+
+
 
 
 
